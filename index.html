@@ -2519,6 +2519,48 @@ const mar30=new Date(2026,2,30);
 const mar31=new Date(2026,2,31);
 const apr1=new Date(2026,3,1);
 const apr2=new Date(2026,3,2);
+const apr3=new Date(2026,3,3);
+
+dayMap[apr3.toDateString()]={
+  type:'article-pub',
+  week:'Pre',
+  date:apr3,
+  title:'Apr 3 — 2 Articles + Social Posts',
+  articles:[
+    {
+      num:'Article 06',
+      title:'Weekly Wrap-Up — Pixel Art, Hitboxes & AI Game Art',
+      note:'Weekly wrap-up · Cross-posting pending',
+      items:[
+        {label:'Ghost',url:'https://blog.makko.ai/pixel-art-hitboxes-ai-game-art-week-march-30/',status:'live'},
+        {label:'dev.to',status:'pending'},
+        {label:'Medium',status:'pending'},
+        {label:'Hashnode',status:'pending'},
+        {label:'Reddit',status:'pending'},
+      ]
+    },
+    {
+      num:'Article 07',
+      title:'Consistent AI Game Art — Makko Collections Guide',
+      note:'Collections pillar · Target kw: consistent AI game art · Cross-posting pending',
+      items:[
+        {label:'Ghost',url:'https://blog.makko.ai/consistent-ai-game-art-makko-collections-guide/',status:'live'},
+        {label:'dev.to',status:'pending'},
+        {label:'Medium',status:'pending'},
+        {label:'Hashnode',status:'pending'},
+        {label:'Reddit',status:'pending'},
+      ]
+    }
+  ],
+  social:[
+    {label:'Twitter/X',url:'https://x.com/1932459483348779008/status/2040164770364653623',status:'live'},
+    {label:'YouTube',url:'https://www.youtube.com/watch?v=JWpHul-72fc',status:'live'},
+    {label:'LinkedIn',url:'https://www.linkedin.com/feed/update/urn:li:activity:7445931689081753600',status:'live'},
+    {label:'Facebook',status:'issue'},
+    {label:'Instagram',status:'pending'},
+    {label:'TikTok',status:'pending'},
+  ]
+};
 
 dayMap[apr2.toDateString()]={
   type:'article-pub',
@@ -2894,6 +2936,20 @@ function buildModal(data,d){
       +'<div class="modal-divider"></div>'
       +section('Syndication — SEO article reposts',syndiPlatforms.map(p=>badge(p,'badge-syndi')).join('')
         +'<div style="margin-top:6px;font-size:11px;color:var(--text-secondary)">Full article reposted natively to all 4 channels. Reddit: r/gamedev or r/indiegaming — post as article link + comment summary. dev.to / Hashnode / Medium: publish in full with canonical URL back to blog.makko.ai.</div>')
+      +'<div class="modal-divider"></div>'
+      +section('Video platforms',platforms.split(', ').map(p=>badge(p,'badge-plat')).join(''));
+  } else if(t==='friday'){
+    title=`Week ${data.week} — Friday · Video ${pad(data.vid.n)}`;
+    const syndiPlatforms=['dev.to','Hashnode','Reddit','Medium'];
+    html=section(`Video ${pad(data.vid.n)}`,data.vid.title)
+      +section('Tool highlighted',data.vid.tool)
+      +section('Primary keyword',badge(data.vid.kw,'badge-kw'))
+      +'<div class="modal-divider"></div>'
+      +section('SEO tutorial article',data.vid.article)
+      +section('Weekly wrap-up article',`Recaps Mon–Thu clips from this week + this video. Teases Week ${data.week+1} content.`)
+      +'<div class="modal-divider"></div>'
+      +section('Syndication — SEO article reposts',syndiPlatforms.map(p=>badge(p,'badge-syndi')).join('')
+        +'<div style="margin-top:6px;font-size:11px;color:var(--text-secondary)">Full article reposted natively to all 4 channels. Reddit: r/gamedev or r/indiegaming. dev.to / Hashnode / Medium: publish with canonical URL back to blog.makko.ai.</div>')
       +'<div class="modal-divider"></div>'
       +section('Video platforms',platforms.split(', ').map(p=>badge(p,'badge-plat')).join(''));
   } else if(t==='short'){
