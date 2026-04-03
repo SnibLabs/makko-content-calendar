@@ -605,6 +605,12 @@ body{
 .bl-why{font-size:10px;color:var(--text-secondary);line-height:1.5;}
 .bl-context{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-muted);margin-top:2px;}
 
+/* ─── FEATURE LAUNCH ROCKETS ─── */
+.launch-tag{display:inline-flex;align-items:center;gap:4px;border-radius:3px;padding:1px 7px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;margin-left:6px;white-space:nowrap;}
+.launch-tag.ready{background:rgba(74,222,128,0.15);border:1px solid rgba(74,222,128,0.35);color:#4ade80;}
+.launch-tag.pending{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);color:var(--text-muted);opacity:0.7;}
+.launch-tag.building{background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.30);color:#fbbf24;}
+
 /* ─── COMMAND STRIP ─── */
 .cmd-strip{
   background:var(--subheader);
@@ -2479,6 +2485,15 @@ const emailCycle=[
 ];
 
 const platforms="YouTube, LinkedIn, Facebook, TikTok, Instagram, Twitter/X";
+
+// Feature launches — map week number (1-based) to upcoming product releases
+// status: 'ready' = marketing good to go | 'building' = known feature, marketing in progress | 'pending' = TBD from Jeremy
+const featureLaunches=[
+  {week:1, name:'Collections (Live)', status:'ready'},
+  {week:2, name:'PH Launch', status:'ready'},
+  {week:3, name:'Tile Sets', status:'building', note:'Feature known — start marketing now, gap-fill when it ships'},
+  {week:5, name:'Animation Pipeline', status:'pending', note:'Full redo in progress — get details from Jeremy in standup'},
+];
 const DAY_NAMES=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const MONTHS=[{y:2026,m:2,name:"March 2026 — Pre-Q2 Activity"},{y:2026,m:3,name:"April 2026"},{y:2026,m:4,name:"May 2026"},{y:2026,m:5,name:"June 2026"}];
 
@@ -2596,6 +2611,7 @@ dayMap[apr13.toDateString()]={
     seoImpact:'Top 10 finish = 15–30 new referring domains within 48 hrs. Combined with directory outreach, could move DR from 0 to 5–15 within 30 days.',
     rule:'Never ask directly for upvotes. PH algorithm detects and penalizes coordinated requests. Ask people to "check it out and share honest thoughts."',
     engagement:'Respond to every comment on the listing throughout launch day — engagement signals boost ranking.',
+    paidDirs:'Submit priority paid directories on launch day so all go live together: tap4.ai ($10 — do first), theresanaiforthat.com ($50 — top pick), marktechpost.com email (asif@marktechpost.com — free, send at 12:01 AM). Optional: seektool.ai ($19.90), aiwith.me ($19.90).',
   }
 };
 
@@ -2917,6 +2933,26 @@ function buildModal(data,d){
     </div>
     <div class="modal-divider"></div>
     <div class="modal-section">
+      <div class="modal-section-label">Paid Directory Submissions — Go Live Same Day</div>
+      <div class="modal-outreach-item" style="margin-bottom:6px;">
+        <div class="modal-outreach-label"><span class="status status-pending">Submit</span> tap4.ai — $10</div>
+        <div class="modal-outreach-detail">Priority listing. Do this first — cheapest, fastest.</div>
+      </div>
+      <div class="modal-outreach-item" style="margin-bottom:6px;">
+        <div class="modal-outreach-label"><span class="status status-pending">Submit</span> theresanaiforthat.com — $50</div>
+        <div class="modal-outreach-detail">Top pick. Highest-traffic AI directory by name searches.</div>
+      </div>
+      <div class="modal-outreach-item" style="margin-bottom:6px;">
+        <div class="modal-outreach-label"><span class="status status-pending">Email</span> marktechpost.com — Free</div>
+        <div class="modal-outreach-detail">asif@marktechpost.com — send at 12:01 AM, timed to launch.</div>
+      </div>
+      <div class="modal-outreach-item">
+        <div class="modal-outreach-label"><span class="status status-ready">Optional</span> seektool.ai ($19.90) · aiwith.me ($19.90)</div>
+        <div class="modal-outreach-detail">If budget approved — submit same day for full launch day coverage.</div>
+      </div>
+    </div>
+    <div class="modal-divider"></div>
+    <div class="modal-section">
       <div class="modal-section-label">Pre-Launch (now → Apr 12)</div>
       <div style="font-size:11px;color:var(--text-secondary);line-height:1.6;">${ph.prelaunch}</div>
     </div>
@@ -3012,7 +3048,15 @@ MONTHS.forEach(mo=>{
         const strip=document.createElement('div');
         strip.className='week-strip';
         const phBanner=(w===0||w===1)?`<span class="ph-banner">🚀 PH Launch Apr 13</span>`:'';
-        strip.innerHTML=`<span class="week-strip-label">Wk ${w+1}</span><span class="week-strip-title">Video ${pad(w+1)}: ${videos[w].title}</span>${phBanner}`;
+        const fl=featureLaunches.find(f=>f.week===w+1);
+        let rocketTag='';
+        if(fl){
+          const icon=fl.status==='ready'?'🚀':fl.status==='building'?'🔧':'⏳';
+          const cls=fl.status==='ready'?'ready':fl.status==='building'?'building':'pending';
+          const tip=fl.note?` title="${fl.note}"`:'';
+          rocketTag=`<span class="launch-tag ${cls}"${tip}>${icon} ${fl.name}</span>`;
+        }
+        strip.innerHTML=`<span class="week-strip-label">Wk ${w+1}</span><span class="week-strip-title">Video ${pad(w+1)}: ${videos[w].title}</span>${phBanner}${rocketTag}`;
         sec.appendChild(strip);
       }
     }
