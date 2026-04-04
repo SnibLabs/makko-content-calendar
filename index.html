@@ -744,6 +744,7 @@ body{
   <button class="tab-btn active" onclick="showTab('tab-calendar')">Q2 Calendar</button>
   <button class="tab-btn" onclick="showTab('tab-ops')">Growth Ops Log</button>
   <button class="tab-btn" onclick="showTab('tab-backlinks')">SEO Backlinks</button>
+  <button class="tab-btn" onclick="showTab('tab-invest')">Investor Outreach</button>
   <button class="tab-btn" onclick="showTab('tab-context')">Team Context</button>
 </div>
 
@@ -1447,58 +1448,6 @@ body{
           <div class="outreach-target"><span class="status status-ready">Now → Apr 12</span> Build PH followers</div>
           <div class="outreach-target"><span class="status status-ready">Now → Apr 12</span> Warm up email list — teaser only, no upvote ask</div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- INVESTOR OUTREACH -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Investor Outreach — Seed Round $2–5M
-      <span>7 pieces written · Blocker: create Wellfound profile before sending</span>
-    </div>
-    <div class="investor-grid">
-      <div class="investor-card">
-        <div class="investor-name">Joshua Baer</div>
-        <div class="investor-firm">Capital Factory</div>
-        <div class="investor-method">josh@capitalfactory.com</div>
-        <div style="margin-top:6px;"><span class="status status-ready">Ready to Send</span></div>
-      </div>
-      <div class="investor-card">
-        <div class="investor-name">Manu Kumar</div>
-        <div class="investor-firm">K9 Ventures</div>
-        <div class="investor-method">manu@k9ventures.com</div>
-        <div style="margin-top:6px;"><span class="status status-ready">Ready to Send</span></div>
-      </div>
-      <div class="investor-card">
-        <div class="investor-name">Edward Lando</div>
-        <div class="investor-firm">Pareto Holdings</div>
-        <div class="investor-method">LinkedIn DM</div>
-        <div style="margin-top:6px;"><span class="status status-ready">Ready to Send</span></div>
-      </div>
-      <div class="investor-card">
-        <div class="investor-name">Brianne Kimmel</div>
-        <div class="investor-firm">Worklife Ventures</div>
-        <div class="investor-method">Intake form</div>
-        <div style="margin-top:6px;"><span class="status status-ready">Ready to Send</span></div>
-      </div>
-      <div class="investor-card">
-        <div class="investor-name">Fabrice Grinda</div>
-        <div class="investor-firm">FJ Labs</div>
-        <div class="investor-method">Intake form</div>
-        <div style="margin-top:6px;"><span class="status status-ready">Ready to Send</span></div>
-      </div>
-      <div class="investor-card">
-        <div class="investor-name">Jack Altman</div>
-        <div class="investor-firm">SF Angel</div>
-        <div class="investor-method">LinkedIn DM</div>
-        <div style="margin-top:6px;"><span class="status status-ready">Ready to Send</span></div>
-      </div>
-      <div class="investor-card">
-        <div class="investor-name">Terrence Rohan</div>
-        <div class="investor-firm">Otherwise Fund</div>
-        <div class="investor-method">LinkedIn DM</div>
-        <div style="margin-top:6px;"><span class="status status-ready">Ready to Send</span></div>
       </div>
     </div>
   </div>
@@ -2229,11 +2178,245 @@ body{
 </div><!-- end tab-backlinks -->
 
 <!-- ══════════════════════════════════════════
-     TAB 5 — TEAM CONTEXT
+     TAB 5 — INVESTOR OUTREACH
      ══════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-invest">
+<div class="ops-page">
+
+  <!-- HEADER NOTE -->
+  <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:14px 18px;margin-bottom:24px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
+    <strong style="color:var(--text-primary);display:block;margin-bottom:4px;">Seed Round — $2–5M Target</strong>
+    Outreach pieces written for first wave. <strong style="color:#f87171;">Blocker: create Wellfound/AngelList profile before sending any outreach.</strong> All contacts below are categorized by type and outreach method. Time angel outreach around the April 13 Product Hunt launch where noted.
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="bl-summary" style="grid-template-columns:repeat(4,1fr);max-width:640px;margin-bottom:28px;">
+    <div class="bl-stat">
+      <div class="bl-stat-label">Angels</div>
+      <div class="bl-stat-value" style="color:#4ade80;">4</div>
+      <div class="bl-stat-sub">Individual investors</div>
+    </div>
+    <div class="bl-stat">
+      <div class="bl-stat-label">Direct Email</div>
+      <div class="bl-stat-value" style="color:#93c5fd;">9</div>
+      <div class="bl-stat-sub">Funds with email</div>
+    </div>
+    <div class="bl-stat">
+      <div class="bl-stat-label">Form Submit</div>
+      <div class="bl-stat-value" style="color:#c4b5fd;">5</div>
+      <div class="bl-stat-sub">Funds with intake forms</div>
+    </div>
+    <div class="bl-stat">
+      <div class="bl-stat-label">First Wave</div>
+      <div class="bl-stat-value" style="color:#fcd34d;">7</div>
+      <div class="bl-stat-sub">Pieces written, ready to send</div>
+    </div>
+  </div>
+
+  <!-- ANGELS -->
+  <div class="ops-section">
+    <div class="ops-section-heading">
+      Angels &amp; Individual Investors
+      <span>LinkedIn or Twitter DM · Warm intro preferred where noted</span>
+    </div>
+    <div class="bl-table-wrap">
+      <table class="bl-table">
+        <thead><tr>
+          <th style="width:18%">Name</th>
+          <th style="width:22%">Background</th>
+          <th style="width:20%">Contact</th>
+          <th style="width:30%">Notes</th>
+          <th style="width:10%">Status</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="site-col">Brendan Iribe</td>
+            <td class="bl-why">Co-founder of Oculus. Deep roots in gaming and immersive tech.</td>
+            <td class="bl-method"><a href="https://www.linkedin.com/in/brendaniribe/" target="_blank">LinkedIn</a></td>
+            <td class="bl-why">Warm intro preferred. Strong fit given gaming background.</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.02);">
+            <td class="site-col">Justin Kan</td>
+            <td class="bl-why">Co-founder of Twitch. Active angel in consumer tech and gaming.</td>
+            <td class="bl-method"><a href="https://www.linkedin.com/in/justinkan/" target="_blank">LinkedIn</a> or Twitter DM</td>
+            <td class="bl-why">Cold outreach works. Direct and responsive on Twitter.</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr>
+            <td class="site-col">Hamilton Chu</td>
+            <td class="bl-why">Games industry veteran. Former EA executive.</td>
+            <td class="bl-method"><a href="https://www.linkedin.com/in/hamilton-chu-b92909/" target="_blank">LinkedIn</a></td>
+            <td class="bl-why">Low priority — limited current angel activity.</td>
+            <td><span class="status status-pending">Low Pri</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.02);">
+            <td class="site-col">Ryan Hoover</td>
+            <td class="bl-why">Founder of Product Hunt. Invests in product-led AI tools. Pre-seed/seed focus.</td>
+            <td class="bl-method"><a href="https://www.linkedin.com/in/ryanrhoover/" target="_blank">LinkedIn</a></td>
+            <td class="bl-why" style="color:#fcd34d;font-weight:500;">Time outreach to April 13 PH launch. Strong alignment with product-led AI.</td>
+            <td><span class="status status-pending">Apr 13</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FUNDS — DIRECT EMAIL -->
+  <div class="ops-section">
+    <div class="ops-section-heading">
+      Funds — Direct Email
+      <span>Send cold pitch directly · Wellfound profile required first</span>
+    </div>
+    <div class="bl-table-wrap">
+      <table class="bl-table">
+        <thead><tr>
+          <th style="width:22%">Fund</th>
+          <th style="width:30%">Focus</th>
+          <th style="width:30%">Email</th>
+          <th style="width:18%">Status</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="site-col">BITKRAFT Ventures</td>
+            <td class="bl-why">Gaming-native VC. One of the strongest fits in the list.</td>
+            <td class="bl-method">pitch@bitkraft.vc</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.02);">
+            <td class="site-col">Griffin Gaming Partners</td>
+            <td class="bl-why">Gaming-only fund. Strong fit for AI game studio angle.</td>
+            <td class="bl-method">contact@griffingp.com</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr>
+            <td class="site-col">Makers Fund</td>
+            <td class="bl-why">Gaming and interactive media. Global reach.</td>
+            <td class="bl-method">info@makersfund.com</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.02);">
+            <td class="site-col">Konvoy</td>
+            <td class="bl-why">Gaming-native. Key contacts: Josh Chapman (Partner), Jason Chapman (former IBM AI/ML), Jackson Vaughan, Taylor Hurst, Anthony Schena. No public pitch form — email or LinkedIn direct.</td>
+            <td class="bl-method">josh@konvoy.co</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr>
+            <td class="site-col">Animoca Brands</td>
+            <td class="bl-why">Gaming and digital entertainment. Heavy in gaming IP and tools.</td>
+            <td class="bl-method">ir@animocabrands.com</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.02);">
+            <td class="site-col">VR Fund</td>
+            <td class="bl-why">Gaming, VR, XR focus. Direct overlap with Makko's market.</td>
+            <td class="bl-method">marco@thevrfund.com</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr>
+            <td class="site-col">Khosla Ventures</td>
+            <td class="bl-why">Tier 1 VC. AI and deep tech. High bar, worth the shot.</td>
+            <td class="bl-method">kv@khoslaventures.com</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.02);">
+            <td class="site-col">Foothill Ventures</td>
+            <td class="bl-why">Early-stage generalist. Game-adjacent portfolio.</td>
+            <td class="bl-method">Contact@Foothill.Ventures</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+          <tr>
+            <td class="site-col">Lux Capital</td>
+            <td class="bl-why">Science and deep tech. AI tools play fits their thesis.</td>
+            <td class="bl-method">info@luxcapital.com</td>
+            <td><span class="status status-ready">Ready</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FUNDS — FORMS -->
+  <div class="ops-section">
+    <div class="ops-section-heading">
+      Funds — Intake Forms
+      <span>No cold email path · Submit via form only</span>
+    </div>
+    <div class="bl-table-wrap">
+      <table class="bl-table">
+        <thead><tr>
+          <th style="width:22%">Fund</th>
+          <th style="width:30%">Focus</th>
+          <th style="width:38%">Form</th>
+          <th style="width:10%">Status</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="site-col">Play Ventures</td>
+            <td class="bl-why">Gaming-first VC. One of the top gaming funds globally. Strong fit.</td>
+            <td class="bl-method"><a href="https://airtable.com/appU8YkayFIxUerOi/shrUiPPCGPFvKeMDl" target="_blank">Airtable form</a></td>
+            <td><span class="status status-pending">Pending</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.02);">
+            <td class="site-col">Anorak Ventures</td>
+            <td class="bl-why">Early-stage consumer and gaming. European base.</td>
+            <td class="bl-method"><a href="https://airtable.com/shrk0uJ7fET4Wm2EDS" target="_blank">Airtable form</a></td>
+            <td><span class="status status-pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td class="site-col">Soma Capital</td>
+            <td class="bl-why">YC-affiliated. Early stage, broad thesis, fast decisions.</td>
+            <td class="bl-method"><a href="https://airtable.com/appzO3diTm7xrL9nI/pagCWWXNYPslVB54s/form" target="_blank">Airtable form</a></td>
+            <td><span class="status status-pending">Pending</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.02);">
+            <td class="site-col">Heracles Capital</td>
+            <td class="bl-why">Gaming and esports focused fund.</td>
+            <td class="bl-method"><a href="https://heraclescapital.com/#section-pitch" target="_blank">Pitch form on site</a></td>
+            <td><span class="status status-pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td class="site-col">1UP Fund</td>
+            <td class="bl-why">Gaming-focused early stage. Community-driven approach.</td>
+            <td class="bl-method"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeQg3UUB5Xn_24q_pV_LvwZ6pMRbRZh_cRnXLn6MoVDwgoZNw/viewform" target="_blank">Google form</a></td>
+            <td><span class="status status-pending">Pending</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FIRST WAVE -->
+  <div class="ops-section">
+    <div class="ops-section-heading">
+      First Wave — Outreach Written
+      <span>7 pieces ready · Wellfound profile needed before sending</span>
+    </div>
+    <div class="track">
+      <div class="track-header">
+        <div class="track-label">Wellfound / AngelList Profile</div>
+        <div class="track-count"><span class="status status-bounced">Blocker</span> Complete before sending</div>
+      </div>
+      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
+        Create a Wellfound profile for Makko AI before sending any outreach. Most angels and seed funds will check it before responding. No profile means reduced credibility on cold outreach.
+      </div>
+    </div>
+    <div style="margin-top:12px;" class="outreach-list">
+      <div class="outreach-target"><span class="status status-ready">Written</span> Joshua Baer — Capital Factory</div>
+      <div class="outreach-target"><span class="status status-ready">Written</span> Manu Kumar — K9 Ventures</div>
+      <div class="outreach-target"><span class="status status-ready">Written</span> Edward Lando — Pareto Holdings</div>
+      <div class="outreach-target"><span class="status status-ready">Written</span> Brianne Kimmel — Worklife Ventures</div>
+      <div class="outreach-target"><span class="status status-ready">Written</span> Fabrice Grinda — FJ Labs</div>
+      <div class="outreach-target"><span class="status status-ready">Written</span> Jack Altman — SF Angel</div>
+      <div class="outreach-target"><span class="status status-ready">Written</span> Terrence Rohan — Otherwise Fund</div>
+    </div>
+  </div>
+
+</div>
+</div><!-- end tab-invest -->
 
 <!-- ══════════════════════════════════════════
-     TAB 5 — TEAM CONTEXT
+     TAB 6 — TEAM CONTEXT
      ══════════════════════════════════════════ -->
 <div class="tab-panel" id="tab-context">
 <div class="ops-page">
@@ -2450,7 +2633,7 @@ function showTab(id) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  const idx = ['tab-prework','tab-calendar','tab-ops','tab-backlinks','tab-context'].indexOf(id);
+  const idx = ['tab-prework','tab-calendar','tab-ops','tab-backlinks','tab-invest','tab-context'].indexOf(id);
   document.querySelectorAll('.tab-btn')[idx].classList.add('active');
   if(id==='tab-calendar'){
     const page=document.getElementById('page');
