@@ -3135,46 +3135,164 @@ const apr1=new Date(2026,3,1);
 const apr2=new Date(2026,3,2);
 const apr3=new Date(2026,3,3);
 
+// ── Apr 3 — Long-form: Right Way to Build Art With AI ──────────────────────
 dayMap[apr3.toDateString()]={
-  type:'article-pub',
+  type:'friday',
   week:'Pre',
   date:apr3,
-  title:'Apr 3 — 2 Articles + Social Posts',
-  articles:[
-    {
-      num:'Article 06',
-      title:'Weekly Wrap-Up — Pixel Art, Hitboxes & AI Game Art',
-      note:'Weekly wrap-up · Live on 4 platforms · Reddit pending',
-      items:[
-        {label:'Ghost',url:'https://blog.makko.ai/pixel-art-hitboxes-ai-game-art-week-march-30/',status:'live'},
-        {label:'dev.to',url:'https://dev.to/makko_ai/the-right-way-to-build-game-art-with-ai-week-of-march-30-45oi',status:'live'},
-        {label:'Medium',url:'https://medium.com/@MakkoAI/the-right-way-to-build-game-art-with-ai-week-of-march-30-fec2337eee17',status:'live'},
-        {label:'Hashnode',url:'https://makkoai.hashnode.dev/the-right-way-to-build-game-art-with-ai-week-of-march-30',status:'live'},
-        {label:'Reddit',status:'pending'},
-      ]
-    },
-    {
-      num:'Article 07',
-      title:'Consistent AI Game Art — Makko Collections Guide',
-      note:'Collections pillar · Target kw: consistent AI game art · Live on 4 platforms · Reddit pending',
-      items:[
-        {label:'Ghost',url:'https://blog.makko.ai/consistent-ai-game-art-makko-collections-guide/',status:'live'},
-        {label:'dev.to',url:'https://dev.to/makko_ai/how-to-use-makko-ai-collections-build-consistent-game-art-with-ai-2ibl',status:'live'},
-        {label:'Medium',url:'https://medium.com/@MakkoAI/how-to-use-makko-ai-collections-build-consistent-game-art-with-ai-17debf40e1a0',status:'live'},
-        {label:'Hashnode',url:'https://makkoai.hashnode.dev/how-to-use-makko-ai-collections-build-consistent-game-art-with-ai',status:'live'},
-        {label:'Reddit',status:'pending'},
-      ]
-    }
-  ],
-  social:[
-    {label:'Twitter/X',url:'https://x.com/1932459483348779008/status/2040164770364653623',status:'live'},
-    {label:'YouTube',url:'https://www.youtube.com/watch?v=JWpHul-72fc',status:'live'},
-    {label:'LinkedIn',url:'https://www.linkedin.com/feed/update/urn:li:activity:7445931689081753600',status:'live'},
-    {label:'Facebook',status:'issue'},
-    {label:'Instagram',status:'pending'},
-    {label:'TikTok',status:'pending'},
-  ]
+  title:'Apr 3 — Long-form + 2 Articles + Social Posts',
+  longform:{
+    title:'The Right Way to Build Game Art With AI — Collections Walkthrough',
+    kw:'consistent AI game art / AI game art generator',
+    note:'Collections pillar long-form. 6 shorts cut from this video.',
+    status:'live',
+    url:'https://www.youtube.com/watch?v=JWpHul-72fc',
+  },
 };
+
+// ── Apr 6 (Mon) — Backlog short ─────────────────────────────────────────────
+const apr6=new Date(2026,3,6);
+dayMap[apr6.toDateString()]={
+  type:'short',
+  week:1,
+  date:apr6,
+  title:'Apr 6 — Backlog Short',
+  isBacklog:true,
+  short:{
+    title:'How to Test Hitboxes In-Game With Debug Box',
+    kw:'pixel art / game dev / hitbox',
+    note:'Backlog short — Arts shorts not ready yet. Posted to keep Mon cadence.',
+    status:'pending',
+  }
+};
+
+// ── Apr 7 (Tue) — Art Short 1 ───────────────────────────────────────────────
+const apr7=new Date(2026,3,7);
+dayMap[apr7.toDateString()]={
+  type:'short',
+  week:1,
+  date:apr7,
+  title:'Apr 7 — Art Short 1',
+  short:{
+    title:'AI Chat Context vs. Collections — Why Chat Sessions Alone Break Your Game Art',
+    kw:'consistent game art / ai art style consistency',
+    hook:'Your AI art looks consistent inside one chat. The second you start a new session, it falls apart.',
+    cta:'Go to Makko.ai and create your first Collection — it\'s free.',
+    source:'Right Way to Build Art With AI — SHORT 1',
+    status:'pending',
+  }
+};
+
+// ── Apr 8 (Wed) — Art Short 2 ───────────────────────────────────────────────
+const apr8=new Date(2026,3,8);
+dayMap[apr8.toDateString()]={
+  type:'short',
+  week:1,
+  date:apr8,
+  title:'Apr 8 — Art Short 2',
+  short:{
+    title:'What a Collections Concept Art Section Actually Does — It\'s Not a Mood Board',
+    kw:'concept art / concept art generator',
+    hook:'Most people treat the Concept Art section in Collections like a mood board. It\'s actually way more powerful than that.',
+    cta:'Watch the full walkthrough on our channel to see it built from scratch.',
+    source:'Right Way to Build Art With AI — SHORT 2',
+    status:'pending',
+  }
+};
+
+// ── Apr 9 (Thu) — Art Short 3 ───────────────────────────────────────────────
+const apr9=new Date(2026,3,9);
+dayMap[apr9.toDateString()]={
+  type:'short',
+  week:1,
+  date:apr9,
+  title:'Apr 9 — Art Short 3',
+  short:{
+    title:'The Iterate Feature — How to Actually Direct AI Art Without Starting Over',
+    kw:'ai character creator / ai character generator',
+    hook:'Stop regenerating from scratch every time your AI art is almost right. There\'s a better way.',
+    cta:'Go to Makko.ai — it\'s free to start.',
+    source:'Right Way to Build Art With AI — SHORT 3',
+    status:'pending',
+  }
+};
+
+// ── Apr 10 (Fri) — Long-form: Reason Devs Never Finish Games ────────────────
+const apr10=new Date(2026,3,10);
+dayMap[apr10.toDateString()]={
+  type:'friday',
+  week:1,
+  date:apr10,
+  title:'Apr 10 — Long-form: Reason Devs Never Finish Games',
+  longform:{
+    title:'The Real Reason Solo Devs Never Finish Their Games — They Aren\'t Artists',
+    kw:'solo developer / indie game development / no-code game development',
+    note:'6 shorts cut from this video. 4 post the week of Apr 13 (PH Launch week). 2 go to backlog.',
+    status:'pending',
+  }
+};
+
+// ── Apr 13 (Mon) — Devs Short 1 + PH Launch ────────────────────────────────
+// PH Launch day already defined below — we merge the short into the ph-launch entry
+// handled in apr13 override below
+
+// ── Apr 14 (Tue) — Devs Short 2 ─────────────────────────────────────────────
+const apr14=new Date(2026,3,14);
+dayMap[apr14.toDateString()]={
+  type:'short',
+  week:2,
+  date:apr14,
+  title:'Apr 14 — Devs Short 2',
+  short:{
+    title:'The Real Reason Solo Devs Don\'t Finish Games',
+    kw:'solo developer / indie game development / how to make a game',
+    hook:'Most solo devs never finish. And it\'s not because they\'re lazy.',
+    cta:'Watch the full video to see the fix.',
+    source:'Reason Devs Never Finish Games — SHORT 2',
+    status:'pending',
+  }
+};
+
+// ── Apr 15 (Wed) — Devs Short 3 ─────────────────────────────────────────────
+const apr15=new Date(2026,3,15);
+dayMap[apr15.toDateString()]={
+  type:'short',
+  week:2,
+  date:apr15,
+  title:'Apr 15 — Devs Short 3',
+  short:{
+    title:'From Text Description to Animated Character in Minutes',
+    kw:'ai character creator / sprite animation / ai animation generator',
+    hook:'I typed a description. This is what came out.',
+    cta:'Build yours free at Makko.ai.',
+    source:'Reason Devs Never Finish Games — SHORT 3',
+    status:'pending',
+  }
+};
+
+// ── Apr 16 (Thu) — Devs Short 4 ─────────────────────────────────────────────
+const apr16=new Date(2026,3,16);
+dayMap[apr16.toDateString()]={
+  type:'short',
+  week:2,
+  date:apr16,
+  title:'Apr 16 — Devs Short 4',
+  short:{
+    title:'What Is a Sprite Sheet and Why Does Your Game Need One',
+    kw:'sprite sheet / pixel art tutorial / how to animate',
+    hook:'Your game engine doesn\'t play videos. It flips through these.',
+    cta:'Generate yours at Makko.ai.',
+    source:'Reason Devs Never Finish Games — SHORT 4',
+    status:'pending',
+  }
+};
+
+// ── Backlog bank (6 clips held in reserve as of wk of Apr 6) ────────────────
+// Art With AI: Short 4 (Sub-Collections), Short 5 (Reference Sheet), Short 6 (Context First)
+// Devs Never Finish: Short 5 (Art Barrier Hot Take), Short 6 (Character Into Your Game)
+// + Hitboxes used Apr 6 (already posted)
+// Total backlog available: 5 held + used 1 = 6 banked
+
 
 dayMap[apr2.toDateString()]={
   type:'article-pub',
@@ -3191,13 +3309,21 @@ dayMap[apr2.toDateString()]={
   ]
 };
 
-// Product Hunt launch day — overrides Week 2 Monday short clip
+// Product Hunt launch day — also posts Devs Short 1
 const apr13=new Date(2026,3,13);
 dayMap[apr13.toDateString()]={
   type:'ph-launch',
   week:2,
   date:apr13,
-  title:'Product Hunt Launch Day',
+  title:'Apr 13 — Product Hunt Launch + Devs Short 1',
+  short:{
+    title:'Why General AI Can\'t Make Game Sprites',
+    kw:'ai game art generator / ai character generator / sprite sheet',
+    hook:'I asked Gemini to make me a game sprite. Here\'s why it\'s useless.',
+    cta:'Try Art Studio free at Makko.ai.',
+    source:'Reason Devs Never Finish Games — SHORT 1',
+    status:'pending',
+  },
   ph:{
     url:'https://producthunt.com/posts/makko-ai',
     maker:'Jeremy Bird',
@@ -3403,10 +3529,42 @@ function buildModal(data,d){
 
   const badge=(text,cls)=>`<span class="badge ${cls}">${text}</span>`;
 
+  const urlRow=(item)=>{
+    const statusClass={live:'status-live',pending:'status-pending',issue:'status-bounced'}[item.status]||'status-pending';
+    const statusText={live:'Live',pending:'Pending',issue:'Issue'}[item.status]||item.status;
+    if(item.status==='live'&&item.url) return `<div class="modal-url-row"><span class="modal-url-plat">${item.label}</span><a class="modal-url-link" href="${item.url}" target="_blank">${item.url.replace('https://','')}</a><span class="status ${statusClass}" style="flex-shrink:0;margin-left:auto">${statusText}</span></div>`;
+    return `<div class="modal-url-row"><span class="modal-url-plat">${item.label}</span><span class="modal-url-pending">${item.status==='issue'?'posting error':'— pending'}</span><span class="status ${statusClass}" style="flex-shrink:0;margin-left:auto">${statusText}</span></div>`;
+  };
+
+  const shortBlock=(s)=>{
+    if(!s) return '';
+    return `<div class="modal-section">
+      <div class="modal-section-label">Short-Form Video <span class="status status-${s.status||'pending'}" style="margin-left:6px;font-size:9px;">${s.status==='live'?'Live':'Pending'}</span></div>
+      <div style="font-size:12px;font-weight:500;color:var(--text-primary);margin-bottom:4px;">${s.title}</div>
+      ${s.hook?`<div style="font-size:11px;color:var(--text-secondary);margin-bottom:3px;"><strong style="color:var(--text-muted);">Hook:</strong> ${s.hook}</div>`:''}
+      <div style="font-size:11px;color:var(--text-secondary);margin-bottom:3px;"><strong style="color:var(--text-muted);">KW:</strong> ${s.kw}</div>
+      ${s.cta?`<div style="font-size:11px;color:var(--text-secondary);margin-bottom:3px;"><strong style="color:var(--text-muted);">CTA:</strong> ${s.cta}</div>`:''}
+      ${s.source?`<div style="font-size:11px;color:var(--text-muted);">Source: ${s.source}</div>`:''}
+      ${s.note?`<div style="font-size:11px;color:var(--text-muted);margin-top:3px;">${s.note}</div>`:''}
+    </div>`;
+  };
+
+  const longformBlock=(lf)=>{
+    if(!lf) return '';
+    return `<div class="modal-section">
+      <div class="modal-section-label">Long-Form Video <span class="status status-${lf.status||'pending'}" style="margin-left:6px;font-size:9px;">${lf.status==='live'?'Live':'Pending'}</span></div>
+      <div style="font-size:12px;font-weight:500;color:var(--text-primary);margin-bottom:4px;">${lf.title}</div>
+      <div style="font-size:11px;color:var(--text-secondary);margin-bottom:3px;"><strong style="color:var(--text-muted);">KW:</strong> ${lf.kw}</div>
+      ${lf.url?`<div class="modal-url-row" style="margin-top:4px;"><span class="modal-url-plat">YouTube</span><a class="modal-url-link" href="${lf.url}" target="_blank">${lf.url.replace('https://','')}</a><span class="status status-live" style="flex-shrink:0;margin-left:auto;">Live</span></div>`:''}
+      ${lf.note?`<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${lf.note}</div>`:''}
+    </div>`;
+  };
+
   if(t==='ph-launch'){
     title='🚀 Product Hunt Launch Day';
     const ph=data.ph;
-    html=`<div class="modal-section">
+    if(data.short){ html+=shortBlock(data.short)+'<div class="modal-divider"></div>'; }
+    html+=`<div class="modal-section">
       <div class="modal-section-label">Listing</div>
       <div class="modal-url-row"><span class="modal-url-plat">PH Page</span><a class="modal-url-link" href="${ph.url}" target="_blank">${ph.url.replace('https://','')}</a><span class="status status-live" style="flex-shrink:0;margin-left:auto">Live</span></div>
       <div style="font-size:11px;color:var(--text-secondary);margin-top:6px;"><strong style="color:var(--text-muted)">Tagline:</strong> ${ph.tagline}</div>
@@ -3456,14 +3614,6 @@ function buildModal(data,d){
     html+=`<div style="margin-top:10px;font-size:11px;color:var(--text-muted)">Full details in the Growth Ops Log tab.</div>`;
   } else if(t==='article-pub'){
     title=data.title;
-    const urlRow=(item)=>{
-      const statusClass={live:'status-live',pending:'status-pending',issue:'status-bounced'}[item.status]||'status-pending';
-      const statusText={live:'Live',pending:'Pending',issue:'Issue'}[item.status]||item.status;
-      if(item.status==='live'&&item.url){
-        return `<div class="modal-url-row"><span class="modal-url-plat">${item.label}</span><a class="modal-url-link" href="${item.url}" target="_blank">${item.url.replace('https://','')}</a><span class="status ${statusClass}" style="flex-shrink:0;margin-left:auto">${statusText}</span></div>`;
-      }
-      return `<div class="modal-url-row"><span class="modal-url-plat">${item.label}</span><span class="modal-url-pending">${item.status==='issue'?'posting error':'— pending'}</span><span class="status ${statusClass}" style="flex-shrink:0;margin-left:auto">${statusText}</span></div>`;
-    };
     html='';
     if(data.devlog){
       const dl=data.devlog;
@@ -3505,94 +3655,48 @@ function buildModal(data,d){
     }
     if(data.note) html+=section('Details',data.note);
     html+=`<div style="margin-top:10px;font-size:11px;color:var(--text-muted)">Full article log in the Pre-Q2 Work Log tab.</div>`;
-  } else if(t==='ph-launch'){
-    title='🚀 Product Hunt Launch Day';
-    const ph=data.ph;
-    html=`<div class="modal-section">
-      <div class="modal-section-label">Listing</div>
-      <div class="modal-url-row"><span class="modal-url-plat">PH Page</span><a class="modal-url-link" href="${ph.url}" target="_blank">${ph.url.replace('https://','')}</a><span class="status status-live" style="flex-shrink:0;margin-left:auto">Live</span></div>
-      <div style="font-size:11px;color:var(--text-secondary);margin-top:6px;"><strong style="color:var(--text-muted)">Maker:</strong> ${ph.maker} &nbsp;·&nbsp; <strong style="color:var(--text-muted)">Launch:</strong> ${ph.launchTime}</div>
-      <div style="font-size:11px;color:var(--text-secondary);margin-top:3px;"><strong style="color:var(--text-muted)">Tagline:</strong> ${ph.tagline}</div>
-    </div>
-    <div class="modal-divider"></div>
-    <div class="modal-section">
-      <div class="modal-section-label">Launch Day Actions</div>
-      <div class="modal-outreach-item" style="margin-bottom:6px;">
-        <div class="modal-outreach-label"><span class="status status-pending">Pending</span> Launch Email</div>
-        <div class="modal-outreach-detail">${ph.emailNote}</div>
-      </div>
-      <div class="modal-outreach-item" style="margin-bottom:6px;">
-        <div class="modal-outreach-label"><span class="status status-pending">Pending</span> SEO Blog Post</div>
-        <div class="modal-outreach-detail">${ph.blogPost}</div>
-      </div>
-      <div class="modal-outreach-item">
-        <div class="modal-outreach-label"><span class="status status-ready">Strategy</span> Engagement</div>
-        <div class="modal-outreach-detail">Respond to every comment on the PH listing throughout the day — engagement signals boost ranking. Do not ask explicitly for upvotes.</div>
-      </div>
-    </div>
-    <div class="modal-divider"></div>
-    <div class="modal-section">
-      <div class="modal-section-label">Paid Directory Submissions — Go Live Same Day</div>
-      <div class="modal-outreach-item" style="margin-bottom:6px;">
-        <div class="modal-outreach-label"><span class="status status-pending">Submit</span> tap4.ai — $10</div>
-        <div class="modal-outreach-detail">Priority listing. Do this first — cheapest, fastest.</div>
-      </div>
-      <div class="modal-outreach-item" style="margin-bottom:6px;">
-        <div class="modal-outreach-label"><span class="status status-pending">Submit</span> theresanaiforthat.com — $50</div>
-        <div class="modal-outreach-detail">Top pick. Highest-traffic AI directory by name searches.</div>
-      </div>
-      <div class="modal-outreach-item" style="margin-bottom:6px;">
-        <div class="modal-outreach-label"><span class="status status-pending">Email</span> marktechpost.com — Free</div>
-        <div class="modal-outreach-detail">asif@marktechpost.com — send at 12:01 AM, timed to launch.</div>
-      </div>
-      <div class="modal-outreach-item">
-        <div class="modal-outreach-label"><span class="status status-ready">Optional</span> seektool.ai ($19.90) · aiwith.me ($19.90)</div>
-        <div class="modal-outreach-detail">If budget approved — submit same day for full launch day coverage.</div>
-      </div>
-    </div>
-    <div class="modal-divider"></div>
-    <div class="modal-section">
-      <div class="modal-section-label">Pre-Launch (now → Apr 12)</div>
-      <div style="font-size:11px;color:var(--text-secondary);line-height:1.6;">${ph.prelaunch}</div>
-    </div>
-    <div class="modal-divider"></div>
-    <div class="modal-section">
-      <div class="modal-section-label">SEO Impact</div>
-      <div style="font-size:11px;color:var(--text-secondary);line-height:1.6;">${ph.seoNote}</div>
-    </div>`;
-    title='Long-form launch day';
-    const syndiPlatforms=['dev.to','Hashnode','Reddit','Medium'];
-    html=section(`Video ${pad(data.vid.n)}`,data.vid.title)
-      +section('Tool highlighted',data.vid.tool)
-      +section('Primary keyword',badge(data.vid.kw,'badge-kw'))
-      +'<div class="modal-divider"></div>'
-      +section('SEO tutorial article',data.vid.article)
-      +section('Weekly wrap-up article',`Recaps Mon–Thu clips from this week + this video. Teases Week ${data.week+1} content.`)
-      +'<div class="modal-divider"></div>'
-      +section('Syndication — SEO article reposts',syndiPlatforms.map(p=>badge(p,'badge-syndi')).join('')
-        +'<div style="margin-top:6px;font-size:11px;color:var(--text-secondary)">Full article reposted natively to all 4 channels. Reddit: r/gamedev or r/indiegaming — post as article link + comment summary. dev.to / Hashnode / Medium: publish in full with canonical URL back to blog.makko.ai.</div>')
-      +'<div class="modal-divider"></div>'
-      +section('Video platforms',platforms.split(', ').map(p=>badge(p,'badge-plat')).join(''));
   } else if(t==='friday'){
-    title=`Week ${data.week} — Friday · Video ${pad(data.vid.n)}`;
-    const syndiPlatforms=['dev.to','Hashnode','Reddit','Medium'];
-    html=section(`Video ${pad(data.vid.n)}`,data.vid.title)
-      +section('Tool highlighted',data.vid.tool)
-      +section('Primary keyword',badge(data.vid.kw,'badge-kw'))
-      +'<div class="modal-divider"></div>'
-      +section('SEO tutorial article',data.vid.article)
-      +section('Weekly wrap-up article',`Recaps Mon–Thu clips from this week + this video. Teases Week ${data.week+1} content.`)
-      +'<div class="modal-divider"></div>'
-      +section('Syndication — SEO article reposts',syndiPlatforms.map(p=>badge(p,'badge-syndi')).join('')
-        +'<div style="margin-top:6px;font-size:11px;color:var(--text-secondary)">Full article reposted natively to all 4 channels. Reddit: r/gamedev or r/indiegaming. dev.to / Hashnode / Medium: publish with canonical URL back to blog.makko.ai.</div>')
-      +'<div class="modal-divider"></div>'
-      +section('Video platforms',platforms.split(', ').map(p=>badge(p,'badge-plat')).join(''));
+    if(data.longform){
+      title=data.title;
+      html+=longformBlock(data.longform);
+      if(data.articles){
+        html+='<div class="modal-divider"></div>';
+        data.articles.forEach(a=>{
+          html+=`<div class="modal-section"><div class="modal-section-label">${a.num} — ${a.title}</div><div style="font-size:10px;color:var(--text-muted);margin-bottom:6px;">${a.note}</div>${a.items.map(urlRow).join('')}</div><div class="modal-divider"></div>`;
+        });
+      }
+      if(data.social){
+        html+=`<div class="modal-section"><div class="modal-section-label">Social Posts</div>${data.social.map(urlRow).join('')}</div>`;
+      }
+    } else {
+      title=`Week ${data.week} — Friday · Video ${pad(data.vid.n)}`;
+      const syndiPlatforms=['dev.to','Hashnode','Reddit','Medium'];
+      html=section(`Video ${pad(data.vid.n)}`,data.vid.title)
+        +section('Tool highlighted',data.vid.tool)
+        +section('Primary keyword',badge(data.vid.kw,'badge-kw'))
+        +'<div class="modal-divider"></div>'
+        +section('SEO tutorial article',data.vid.article)
+        +section('Weekly wrap-up article',`Recaps Mon–Thu clips from this week + this video. Teases Week ${data.week+1} content.`)
+        +'<div class="modal-divider"></div>'
+        +section('Syndication — SEO article reposts',syndiPlatforms.map(p=>badge(p,'badge-syndi')).join('')
+          +'<div style="margin-top:6px;font-size:11px;color:var(--text-secondary)">Full article reposted natively to all 4 channels. Reddit: r/gamedev or r/indiegaming. dev.to / Hashnode / Medium: publish with canonical URL back to blog.makko.ai.</div>')
+        +'<div class="modal-divider"></div>'
+        +section('Video platforms',platforms.split(', ').map(p=>badge(p,'badge-plat')).join(''));
+    }
   } else if(t==='short'){
-    title=`Short-form clip ${data.clip} of 4`;
-    html=section(`Source — Video ${pad(data.vid.n)}`,data.vid.title)
-      +section('Clip title / concept','TBD — to be pulled from transcript once approved',true)
-      +section('Primary keyword',badge(data.vid.kw,'badge-kw'))
-      +section('Platforms',platforms.split(', ').map(p=>badge(p,'badge-plat')).join(''));
+    if(data.short){
+      title=data.title;
+      html+=shortBlock(data.short);
+      if(data.isBacklog){
+        html+=`<div class="modal-divider"></div><div class="modal-section"><div class="modal-section-label" style="color:#fcd34d;">📦 Backlog Short</div><div style="font-size:11px;color:var(--text-secondary);">Posted to maintain Monday cadence while new video shorts are being prepared.</div></div>`;
+      }
+    } else {
+      title=`Short-form clip ${data.clip} of 4`;
+      html=section(`Source — Video ${pad(data.vid.n)}`,data.vid.title)
+        +section('Clip title / concept','TBD — to be pulled from transcript once approved',true)
+        +section('Primary keyword',badge(data.vid.kw,'badge-kw'))
+        +section('Platforms',platforms.split(', ').map(p=>badge(p,'badge-plat')).join(''));
+    }
   } else if(t==='short-email'){
     title=`Short-form clip ${data.clip} of 4 + Email campaign`;
     const em=data.email;
@@ -3705,14 +3809,25 @@ MONTHS.forEach(mo=>{
 
       let pills='';
       if(tp==='friday'){
-        pills=`<div class="pill pill-friday">Video ${pad(data.vid.n)}</div>`
-             +`<div class="pill pill-seo">SEO article</div>`
-             +`<div class="pill pill-wrap">Wrap-up</div>`
-             +`<div class="pill pill-syndi">dev.to · Hashnode</div>`
-             +`<div class="pill pill-syndi">Reddit · Medium</div>`;
+        if(data.longform){
+          pills=`<div class="pill pill-friday">Long-form</div>`
+               +`<div class="pill pill-friday" style="font-size:9px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${data.longform.title.length>32?data.longform.title.slice(0,32)+'…':data.longform.title}</div>`;
+        } else {
+          pills=`<div class="pill pill-friday">Video ${pad(data.vid.n)}</div>`
+               +`<div class="pill pill-seo">SEO article</div>`
+               +`<div class="pill pill-wrap">Wrap-up</div>`
+               +`<div class="pill pill-syndi">dev.to · Hashnode</div>`
+               +`<div class="pill pill-syndi">Reddit · Medium</div>`;
+        }
       } else if(tp==='short'){
-        pills=`<div class="pill pill-short">Clip ${data.clip} of 4</div>`
-             +`<div class="pill pill-short">V${pad(data.vid.n)}</div>`;
+        if(data.short){
+          const label=data.isBacklog?'📦 Backlog':'Short';
+          pills=`<div class="pill pill-short">${label}</div>`
+               +`<div class="pill pill-short" style="font-size:9px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${data.short.title.length>34?data.short.title.slice(0,34)+'…':data.short.title}</div>`;
+        } else {
+          pills=`<div class="pill pill-short">Clip ${data.clip} of 4</div>`
+               +`<div class="pill pill-short">V${pad(data.vid.n)}</div>`;
+        }
       } else if(tp==='short-email'){
         pills=`<div class="pill pill-short">Clip ${data.clip} of 4</div>`
              +`<div class="pill pill-email">Email W${data.email.ewn}</div>`;
@@ -3731,7 +3846,7 @@ MONTHS.forEach(mo=>{
              +(data.email ? `<div class="pill pill-email">Email sent</div>` : '');
       } else if(tp==='ph-launch'){
         pills=`<div class="pill pill-ph">🚀 Product Hunt</div>`
-             +`<div class="pill pill-ph-sub">Launch Day</div>`
+             +(data.short?`<div class="pill pill-short" style="font-size:9px;">${data.short.title.length>28?data.short.title.slice(0,28)+'…':data.short.title}</div>`:'')
              +`<div class="pill pill-ph-sub">Blog + Email</div>`;
       }
 
