@@ -434,6 +434,75 @@ body{
 .status-pending{background:var(--c-pending-bg);color:#fcd34d;border:1px solid rgba(217,119,6,0.3)}
 .status-live{background:var(--c-live-bg);color:#2dd4bf;border:1px solid rgba(45,212,191,0.3)}
 .status-confirmed{background:rgba(74,222,128,0.15);color:#4ade80;border:1px solid rgba(74,222,128,0.35)}
+/* ── Collapsible sections ── */
+.collapsible-header{
+  display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;user-select:none;padding:13px 18px;
+  background:var(--cards);border:1px solid var(--b-medium);
+  border-radius:6px;margin-bottom:2px;transition:background 0.15s;
+}
+.collapsible-header:hover{background:#1e2d45;}
+.collapsible-title{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;color:var(--text-primary);
+}
+.collapsible-meta{
+  font-family:'IBM Plex Mono',monospace;font-size:9.5px;
+  color:var(--text-muted);margin-top:2px;
+}
+.collapsible-arrow{
+  font-size:10px;color:var(--text-muted);transition:transform 0.2s;
+  flex-shrink:0;margin-left:12px;
+}
+.collapsible-arrow.open{transform:rotate(90deg);}
+.collapsible-body{
+  display:none;padding:14px 0 4px 0;
+  display:none;
+}
+.collapsible-body.open{display:block;}
+
+/* ── WRAP tab ── */
+.wrap-week{
+  border:1px solid var(--b-medium);border-radius:8px;
+  overflow:hidden;margin-bottom:16px;
+}
+.wrap-week-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 18px;background:rgba(45,212,191,0.06);
+  border-bottom:1px solid var(--b-medium);cursor:pointer;
+}
+.wrap-week-label{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
+}
+.wrap-week-date{
+  font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-muted);
+}
+.wrap-week-body{display:none;padding:16px;}
+.wrap-week-body.open{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
+.wrap-card{
+  background:var(--cards);border:1px solid var(--b-medium);
+  border-radius:6px;padding:14px;
+}
+.wrap-card-name{
+  font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;
+}
+.wrap-card-name.kyle{color:#f87171;}
+.wrap-card-name.zac{color:#60a5fa;}
+.wrap-card-name.cesar{color:#a78bfa;}
+.wrap-card-name.tony{color:#fcd34d;}
+.wrap-section-label{
+  font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--text-muted);margin:8px 0 4px 0;
+}
+.wrap-item{
+  font-size:11px;color:var(--text-secondary);line-height:1.65;
+  padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.wrap-item:last-child{border-bottom:none;}
+.wrap-empty{font-size:11px;color:var(--text-muted);font-style:italic;}
+
 
 .investor-grid{
   display:grid;
@@ -747,6 +816,7 @@ body{
   <button class="tab-btn" onclick="showTab('tab-backlinks')">SEO Backlinks</button>
   <button class="tab-btn" onclick="showTab('tab-invest')">Investor Outreach</button>
   <button class="tab-btn" onclick="showTab('tab-context')">Team Context</button>
+  <button class="tab-btn" onclick="showTab('tab-wrap')">WRAP</button>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -754,12 +824,18 @@ body{
      ══════════════════════════════════════════ -->
 <div class="tab-panel" id="tab-prework">
 <div class="prework-page">
+  <p style="font-size:11px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;letter-spacing:0.05em;margin-bottom:18px;">Click any section header to expand or collapse it.</p>
 
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Product Hunt Launch — Apr 13, 2026
-      <span>producthunt.com/posts/makko-ai · Maker: Jeremy Bird · 12:01 AM PDT</span>
+
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_product_hunt_launc_1')">
+      <div>
+        <div class="collapsible-title">Product Hunt Launch — Apr 13, 2026</div>
+        <div class="collapsible-meta">producthunt.com/posts/makko-ai · Maker: Jeremy Bird · 12:01 AM PDT</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_product_hunt_launc_1">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_product_hunt_launc_1">
 
     <div style="background:var(--cards);border:1px solid rgba(255,98,0,0.30);border-radius:4px;padding:14px 18px;margin-bottom:16px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
       <strong style="color:#ff8c42;display:block;margin-bottom:4px;">🚀 Launch confirmed — Apr 13, 2026</strong>
@@ -801,14 +877,19 @@ body{
           <div class="article-type" style="margin-top:4px;">SEO impact: top 10 PH finish = 15–30 new referring domains in 48 hrs · domain authority grows within 30 days</div>
         </div>
       </div>
-    </div>
+
+    </div>    </div>
   </div>
 
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Blog Series — Week of March 30, 2026
-      <span>5-Article SEO Series · Primary platform: blog.makko.ai · Syndi: dev.to · Medium · Hashnode · Reddit</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_blog_series___week_2')">
+      <div>
+        <div class="collapsible-title">Blog Series — Week of March 30, 2026</div>
+        <div class="collapsible-meta">5-Article SEO Series · Primary platform: blog.makko.ai · Syndi: dev.to · Medium · Hashnode · Reddit</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_blog_series___week_2">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_blog_series___week_2">
 
     <div style="margin-bottom:20px;padding:12px 16px;background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;font-size:12px;color:var(--text-secondary);line-height:1.7;">
       Five-article pillar + cluster series targeting the art-first and vibe coding keyword clusters. All 5 articles published March 30 – April 1, 2026. Primary platform is Ghost (blog.makko.ai) with canonical URLs set. All syndicated versions link back to canonical. Series supports the Q2 content engine — each article feeds internal linking, YouTube video descriptions, and keyword cluster authority.
@@ -1112,16 +1193,21 @@ body{
       <div class="url-row"><div class="url-platform">YT Short</div><a class="url-link" href="https://www.youtube.com/shorts/PVZFv6Aba3c" target="_blank">youtube.com/shorts/PVZFv6Aba3c</a><span class="status status-live" style="margin-left:auto;flex-shrink:0">Live</span></div>
       <div class="url-row"><div class="url-platform">TikTok</div><a class="url-link" href="https://www.tiktok.com/@makkoai/video/7624196154753879309" target="_blank">tiktok.com/@makkoai/video/7624196154753879309</a><span class="status status-live" style="margin-left:auto;flex-shrink:0">Live</span></div>
       <div class="url-row"><div class="url-platform">Facebook</div><a class="url-link" href="https://www.facebook.com/reel/4274728806175960/" target="_blank">facebook.com/reel/4274728806175960/</a><span class="status status-live" style="margin-left:auto;flex-shrink:0">Live</span></div>
-    </div>
+
+    </div>    </div>
 
   </div>
 
   <!-- APR 3 SECTION -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Apr 3, 2026
-      <span>2 blogs published · 3 social live · Facebook pending · Cross-posting pending</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_apr_3__2026_3')">
+      <div>
+        <div class="collapsible-title">Apr 3, 2026</div>
+        <div class="collapsible-meta">2 blogs published · 3 social live · Facebook pending · Cross-posting pending</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_apr_3__2026_3">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_apr_3__2026_3">
 
     <div class="article-log">
 
@@ -1210,7 +1296,8 @@ body{
       <div class="url-row"><div class="url-platform">Facebook</div><span class="modal-url-pending">— upload issues, pending</span><span class="status status-pending" style="margin-left:auto;flex-shrink:0">Pending</span></div>
       <div class="url-row"><div class="url-platform">Instagram</div><span class="modal-url-pending">— scheduled 6pm CST</span><span class="status status-pending" style="margin-left:auto;flex-shrink:0">Scheduled</span></div>
       <div class="url-row"><div class="url-platform">TikTok</div><span class="modal-url-pending">— scheduled 6pm CST</span><span class="status status-pending" style="margin-left:auto;flex-shrink:0">Scheduled</span></div>
-    </div>
+
+    </div>    </div>
 
   </div>
 
@@ -1272,13 +1359,19 @@ body{
      ══════════════════════════════════════════ -->
 <div class="tab-panel" id="tab-ops">
 <div class="ops-page">
+  <p style="font-size:11px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;letter-spacing:0.05em;margin-bottom:18px;">Click any section header to expand or collapse it.</p>
+
 
   <!-- TRACTION SNAPSHOT -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Traction Snapshot
-      <span>As of March 2026 · All organic · Zero paid spend</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_traction_snapshot_4')">
+      <div>
+        <div class="collapsible-title">Traction Snapshot</div>
+        <div class="collapsible-meta">As of March 2026 · All organic · Zero paid spend</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_traction_snapshot_4">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_traction_snapshot_4">
     <div class="traction-bar">
       <div class="traction-item">
         <div class="traction-label">Total Users</div>
@@ -1305,15 +1398,20 @@ body{
         <div class="traction-value" style="font-size:12px">YouTube</div>
         <div class="traction-sub">40% · Search 33%</div>
       </div>
-    </div>
+
+    </div>    </div>
   </div>
 
   <!-- B2B OUTREACH -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      B2B Outreach
-      <span>Tracks 01–04 · March 2026</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_b2b_outreach_5')">
+      <div>
+        <div class="collapsible-title">B2B Outreach</div>
+        <div class="collapsible-meta">Tracks 01–04 · March 2026</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_b2b_outreach_5">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_b2b_outreach_5">
 
     <div class="track">
       <div class="track-header">
@@ -1410,15 +1508,20 @@ body{
           <div class="outreach-target"><span class="status status-pending">Research</span> Articulate — Partnership angle</div>
         </div>
       </div>
-    </div>
+
+    </div>    </div>
   </div>
 
   <!-- PRODUCT HUNT -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Product Hunt Launch — Apr 13, 2026
-      <span>Listing live · 12:01 AM PDT · Maker: Jeremy Bird</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_product_hunt_launc_6')">
+      <div>
+        <div class="collapsible-title">Product Hunt Launch — Apr 13, 2026</div>
+        <div class="collapsible-meta">Listing live · 12:01 AM PDT · Maker: Jeremy Bird</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_product_hunt_launc_6">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_product_hunt_launc_6">
     <div class="traction-bar" style="margin-bottom:16px;">
       <div class="traction-item">
         <div class="traction-label">Listing</div>
@@ -1450,15 +1553,20 @@ body{
           <div class="outreach-target"><span class="status status-ready">Now → Apr 12</span> Warm up email list — teaser only, no upvote ask</div>
         </div>
       </div>
-    </div>
+
+    </div>    </div>
   </div>
 
   <!-- PR & MEDIA -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      PR &amp; Media — Pitch Around Apr 13
-      <span>Research complete · None pitched yet · PH listing is the news hook</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_pr__amp__media___p_7')">
+      <div>
+        <div class="collapsible-title">PR &amp; Media — Pitch Around Apr 13</div>
+        <div class="collapsible-meta">Research complete · None pitched yet · PH listing is the news hook</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_pr__amp__media___p_7">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_pr__amp__media___p_7">
     <div style="display:flex;flex-direction:column;gap:10px;">
       <div class="track">
         <div class="track-header">
@@ -1529,6 +1637,7 @@ body{
         </div>
       </div>
     </div>
+    </div>
   </div>
 
 </div>
@@ -1540,11 +1649,17 @@ body{
      ══════════════════════════════════════════ -->
 <div class="tab-panel" id="tab-backlinks">
 <div class="bl-page">
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      SEO Backlink Outreach
-      <span>Updated Apr 3, 2026 · 44 done · 5 pending · 12 paid for discussion</span>
+  <p style="font-size:11px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;letter-spacing:0.05em;margin-bottom:18px;">Click any section header to expand or collapse it.</p>
+
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_seo_backlink_outre_8')">
+      <div>
+        <div class="collapsible-title">SEO Backlink Outreach</div>
+        <div class="collapsible-meta">Updated Apr 3, 2026 · 44 done · 5 pending · 12 paid for discussion</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_seo_backlink_outre_8">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_seo_backlink_outre_8">
 
     <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:14px 18px;margin-bottom:20px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
       <strong style="color:var(--text-primary);display:block;margin-bottom:6px;">Strategy</strong>
@@ -2234,6 +2349,7 @@ body{
     </div>
 
   </div>
+    </div>
 </div>
 </div><!-- end tab-backlinks -->
 
@@ -2242,6 +2358,8 @@ body{
      ══════════════════════════════════════════ -->
 <div class="tab-panel" id="tab-invest">
 <div class="ops-page">
+  <p style="font-size:11px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;letter-spacing:0.05em;margin-bottom:18px;">Click any section header to expand or collapse it.</p>
+
 
   <!-- HEADER NOTE -->
   <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:14px 18px;margin-bottom:24px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
@@ -2274,11 +2392,15 @@ body{
   </div>
 
   <!-- ANGELS -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Angels &amp; Individual Investors
-      <span>LinkedIn or Twitter DM · Warm intro preferred where noted</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_angels__amp__indiv_9')">
+      <div>
+        <div class="collapsible-title">Angels &amp; Individual Investors</div>
+        <div class="collapsible-meta">LinkedIn or Twitter DM · Warm intro preferred where noted</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_angels__amp__indiv_9">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_angels__amp__indiv_9">
     <div class="bl-table-wrap">
       <table class="bl-table">
         <thead><tr>
@@ -2320,14 +2442,19 @@ body{
         </tbody>
       </table>
     </div>
+    </div>
   </div>
 
   <!-- FUNDS — DIRECT EMAIL -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Funds — Direct Email
-      <span>Send cold pitch directly · Wellfound profile required first</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_funds___direct_ema_10')">
+      <div>
+        <div class="collapsible-title">Funds — Direct Email</div>
+        <div class="collapsible-meta">Send cold pitch directly · Wellfound profile required first</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_funds___direct_ema_10">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_funds___direct_ema_10">
     <div class="bl-table-wrap">
       <table class="bl-table">
         <thead><tr>
@@ -2394,14 +2521,19 @@ body{
         </tbody>
       </table>
     </div>
+    </div>
   </div>
 
   <!-- FUNDS — FORMS -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Funds — Intake Forms
-      <span>No cold email path · Submit via form only</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_funds___intake_for_11')">
+      <div>
+        <div class="collapsible-title">Funds — Intake Forms</div>
+        <div class="collapsible-meta">No cold email path · Submit via form only</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_funds___intake_for_11">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_funds___intake_for_11">
     <div class="bl-table-wrap">
       <table class="bl-table">
         <thead><tr>
@@ -2444,14 +2576,19 @@ body{
         </tbody>
       </table>
     </div>
+    </div>
   </div>
 
   <!-- FIRST WAVE -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      First Wave — Outreach Written
-      <span>7 pieces ready · Wellfound profile needed before sending</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_first_wave___outre_12')">
+      <div>
+        <div class="collapsible-title">First Wave — Outreach Written</div>
+        <div class="collapsible-meta">7 pieces ready · Wellfound profile needed before sending</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-cs_first_wave___outre_12">▶</span>
     </div>
+    <div class="collapsible-body" id="sec-cs_first_wave___outre_12">
     <div class="track">
       <div class="track-header">
         <div class="track-label">Wellfound / AngelList Profile</div>
@@ -2470,6 +2607,7 @@ body{
       <div class="outreach-target"><span class="status status-ready">Written</span> Jack Altman — SF Angel</div>
       <div class="outreach-target"><span class="status status-ready">Written</span> Terrence Rohan — Otherwise Fund</div>
     </div>
+    </div>
   </div>
 
 </div>
@@ -2481,322 +2619,407 @@ body{
 <div class="tab-panel" id="tab-context">
 <div class="ops-page">
 
-  <!-- ============================================================ -->
-  <!-- PRODUCT DIRECTION -->
-  <!-- ============================================================ -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Product Direction
-      <span>Apr 2, 2026 · Source: Jeremy Bird</span>
-    </div>
+  <p style="font-size:11px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;letter-spacing:0.05em;margin-bottom:18px;">Click any section header to expand or collapse it.</p>
 
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Priority Order</div>
-        <div class="track-count">Art Studio first · Code Studio deprioritized</div>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('product_direction')">
+      <div>
+        <div class="collapsible-title">Product Direction</div>
+        <div class="collapsible-meta">Apr 2, 2026 · Source: Jeremy Bird · Strategic reference</div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
-        <div style="margin-bottom:4px;"><strong style="color:var(--text-primary);">1. Art Studio</strong> — primary focus. Not yet loved by the team or user base.</div>
-        <div style="margin-bottom:4px;"><strong style="color:var(--text-primary);">2. Animation pipeline</strong> — full redo in progress. Animating any generated asset is the goal.</div>
-        <div style="margin-bottom:4px;"><strong style="color:var(--text-primary);">3. Tile set support</strong> — biggest missing feature. No tile sets = no platformers = not MLP. Do not oversell game-building until this ships.</div>
-        <div><strong style="color:var(--text-muted);">4. Code Studio</strong> — deprioritized. Paying users show little interest in coding.</div>
-      </div>
+      <span class="collapsible-arrow" id="arr-product_direction">▶</span>
     </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Target Customer</div>
-        <div class="track-count">Developers needing art · Not hobbyists</div>
+    <div class="collapsible-body" id="sec-product_direction">
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:4px;">
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Priority Order</div>
+          <div class="track-count">Art Studio first · Code Studio deprioritized</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          <div style="margin-bottom:4px;"><strong style="color:var(--text-primary);">1. Art Studio</strong> — primary focus. Not yet loved by the team or user base.</div>
+          <div style="margin-bottom:4px;"><strong style="color:var(--text-primary);">2. Animation pipeline</strong> — full redo in progress. Animating any generated asset is the goal.</div>
+          <div style="margin-bottom:4px;"><strong style="color:var(--text-primary);">3. Tile set support</strong> — biggest missing feature. No tile sets = no platformers = not MLP.</div>
+          <div><strong style="color:var(--text-muted);">4. Code Studio</strong> — deprioritized. Paying users show little interest in coding.</div>
+        </div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
-        <div style="margin-bottom:4px;"><strong style="color:#4ade80;">60–70%</strong> Independent developers who continuously need art assets for their games.</div>
-        <div style="margin-bottom:4px;"><strong style="color:#fcd34d;">Growing</strong> Game designers and specialized game artists.</div>
-        <div><strong style="color:var(--text-muted);">Not the target</strong> Hobbyists looking for a one-shot cool creation.</div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Target Customer</div>
+          <div class="track-count">60–70% independent devs needing art · Not hobbyists</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          <div style="margin-bottom:4px;"><strong style="color:#4ade80;">60–70%</strong> Independent developers who continuously need art assets.</div>
+          <div style="margin-bottom:4px;"><strong style="color:#fcd34d;">Growing</strong> Game designers and specialized game artists.</div>
+          <div><strong style="color:var(--text-muted);">Not the target</strong> Hobbyists looking for a one-shot creation.</div>
+        </div>
       </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Paywall Strategy — Decided Apr 2</div>
-        <div class="track-count">Free = evaluate · Paid = actual value</div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Paywall Strategy</div>
+          <div class="track-count">Free = evaluate · Paid = actual value</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Free users evaluate, not derive value. Paywall aggressively. Paid: simultaneous iteration, mass export, zipped collections, sprite sheet advanced options, background processing, higher limits.<br><br><strong style="color:var(--text-primary);">Future tiers:</strong> $20 — advanced sprite sheet. Higher — Gemini Pro, 4K export.
+        </div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
-        <div style="margin-bottom:8px;">Free users are there to evaluate the product, not derive value. Paywall aggressively. Paid features include: simultaneous iteration, mass export, zipped collections, sprite sheet advanced options, background processing, higher limits.</div>
-        <div><strong style="color:var(--text-primary);">Future tiers:</strong> $20 tier — advanced sprite sheet workflow. Higher tier — Gemini Pro, 4K export.</div>
       </div>
     </div>
   </div>
 
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Content Rules
-      <span>Agreed Apr 2, updated Apr 6 · Don't override without team discussion</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('content_rules')">
+      <div>
+        <div class="collapsible-title">Content Rules</div>
+        <div class="collapsible-meta">Agreed Apr 2, updated Apr 6 · Don't override without team discussion</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-content_rules">▶</span>
     </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Video Philosophy — "Good Enough"</div>
-        <div class="track-count"><span class="status status-live">Decided</span></div>
+    <div class="collapsible-body" id="sec-content_rules">
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:4px;">
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Video Philosophy</div>
+          <div class="track-count">Good enough · Day 2–3 after feature access</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Capture video on day 2 or 3 after feature access. Don't wait for a polished product. Match the product's shipping speed.
+        </div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        Capture video on day 2 or 3 after feature access. Don't wait for a polished product. Two-thirds of what's needed exists before the product is locked — get it early. Match the product's shipping speed.
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">No More Video Series</div>
+          <div class="track-count">Standalone only · No deep dives</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Series lock the team into rigid schedules. All videos are standalone — one concept, one use, one payoff.
+        </div>
       </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">No More Video Series</div>
-        <div class="track-count"><span class="status status-live">Decided</span></div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Planning Horizon</div>
+          <div class="track-count">6 weeks max · Jeremy's rule</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Don't plan content further than 6 weeks out. Product moves too fast. Animation and tiling will each need immediate video response when they ship.
+        </div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        Series lock the team into a 4-week schedule with no room to pivot. All videos are standalone from here out — one concept, one use, one payoff. No deep dives.
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Content Format</div>
+          <div class="track-count">Game type videos · No technical deep dives</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Organize videos around specific game types — show how to get all the art for that genre. Jeremy's 3 anchors: (1) Concept art and ideation. (2) Specific assets that work today — TCG cards. (3) Tiling video at ship.
+        </div>
       </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Planning Horizon — 6 Weeks Max</div>
-        <div class="track-count"><span class="status status-live">Decided</span></div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Production</div>
+          <div class="track-count">Cesar narrates short-form · Ukin edits</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Cesar narrates all short-form. Ukin edits. For long-form: Cesar records and provides transcript notes as edit directions, Ukin assembles.
+        </div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        Jeremy explicitly said don't plan content further than 6 weeks out. Product moves too fast. Animation pipeline and tiling will each require immediate video response when they ship — Tony V and Jeremy need better coordination on release timing.
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">YouTube</div>
+          <div class="track-count">Primary growth engine · 40–50 signups/launch</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Confirmed primary growth channel — 40–50 signups in first 24 hours per video. Recent short hit ~11k views. Protect this pipeline. Shorts Mon–Thu, long-form Friday.
+        </div>
       </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Content Format — Game Type Videos</div>
-        <div class="track-count"><span class="status status-live">Decided</span></div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Predzor — $1,500</div>
+          <div class="track-count">Commercial beats only · Not educational</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          $1,500 for motion-graphics-heavy sizzle reels. In-house (Cesar + Ukin) handles all educational content and the PH launch video.
+        </div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        <div style="margin-bottom:8px;">Organize videos around specific game types — show how to get all the art for that genre and drop it into Code Studio. No deep technical explanation.</div>
-        <div style="color:var(--text-muted);font-size:11.5px;">Jeremy's 3 anchors: (1) Concept art and ideation — set a game's look and feel. (2) Specific assets that work today — TCG cards via the template workflow. (3) Tiling video — launch the moment tile sets ship. Jeremy called it a game-changing moment.</div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">PostHog Reviews</div>
+          <div class="track-count">Weekly · Blocker: Kyle needs to give Cesar access</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Kyle + Cesar watch 5 session recordings 1–2x per week (1 hour). Goal: spot friction and drop-off before they become assumptions.
+        </div>
       </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Production — Cesar Narrates All Short-Form</div>
-        <div class="track-count"><span class="status status-live">Decided</span></div>
-      </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        Cesar narrates all short-form. Ukin edits. Consistent voice, clean division of labor. For long-form: Cesar records audio and clips, provides transcript notes as edit directions, Ukin assembles.
-      </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">YouTube — Primary Growth Channel</div>
-        <div class="track-count">Apr 6 · <span style="color:#4ade80;">40–50 signups per video launch</span></div>
-      </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        YouTube confirmed as the primary growth engine — driving 40–50 signups in the first 24 hours per video launch. Growth is accelerating. A recent short approached 11,000 views. Protect this pipeline above all else. YouTube schedule (shorts Mon–Thu, long-form Friday) is flexible to accommodate major product-driven beats.
-      </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Predzor Budget — $1,500 Allocated</div>
-        <div class="track-count">Apr 6 · Commercial beats only</div>
-      </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        $1,500 Predzor budget is for commercial marketing beats and sizzle reels — motion-graphics-heavy content that requires specialist production. In-house team (Cesar + Ukin) handles all educational content and the Product Hunt launch video. Do not reassign Predzor budget to educational content.
-      </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">PostHog — Weekly Session Review</div>
-        <div class="track-count" style="color:#f87171;">Blocker: Kyle needs to give Cesar access</div>
-      </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        Kyle and Cesar watch 5 PostHog session recordings once or twice a week (1 hour). Goal: spot friction, unexpected usage patterns, and drop-off moments before they become assumptions.
       </div>
     </div>
-
   </div>
 
-  <!-- ============================================================ -->
-  <!-- PRODUCT HUNT LAUNCH -->
-  <!-- ============================================================ -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Product Hunt Launch — Apr 13
-      <span>Apr 6 · All hands · 24-hour window · Do not waste it</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('product_hunt_launch__apr_13')">
+      <div>
+        <div class="collapsible-title">Product Hunt Launch — Apr 13</div>
+        <div class="collapsible-meta">Apr 6 · All hands · 24-hour window · Do not waste it</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-product_hunt_launch__apr_13">▶</span>
     </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Launch Strategy</div>
-        <div class="track-count"><span class="status status-ready">Active</span></div>
+    <div class="collapsible-body" id="sec-product_hunt_launch__apr_13">
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:4px;">
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Launch Strategy</div>
+          <div class="track-count"><span class='status status-ready'>Active</span> · Apr 13</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Launch aligned with Collections video. Email fires at exact launch minute — primary traffic driver, must be top-tier.<br>5 press release emails go out 48hrs before. Purchase features on AI tool finders to boost votes.
+        </div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
-        <div style="margin-bottom:4px;">Launch postponed to align with Collections video and shorts — reposition brand around art first, then open the window.</div>
-        <div style="margin-bottom:4px;">Launch email fires at the exact minute the listing goes live. This is the primary traffic driver — it must be top-tier.</div>
-        <div style="margin-bottom:4px;">5 press release emails go out 48 hours before launch. Target outlets for blog coverage on launch day.</div>
-        <div>Purchase features on AI tool finders to boost votes. Paid directory purchases timed to launch window.</div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Organic Vote Strategy</div>
+          <div class="track-count">No direct ask — PH policy</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Three strongest channels: Reddit, YouTube Shorts, direct email to existing users. Frame all outreach around the product moment, not the voting mechanic.
+        </div>
       </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Organic Vote Strategy</div>
-        <div class="track-count">No direct ask for votes — PH policy</div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Sizzle Reel (30–60 sec)</div>
+          <div class="track-count"><span style='color:#f87171;'>Required before launch · Kyle + Cesar + Ukin</span></div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Use Sector Scavengers collections pages as visual source. Do not interrupt Cesar/Ukin assigned tasks before the window. Predzor handles commercial; in-house handles PH.
+        </div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
-        <div style="margin-bottom:4px;"><strong style="color:var(--text-primary);">Three strongest channels:</strong> Reddit, YouTube Shorts, direct email to existing users.</div>
-        <div>Do not explicitly ask for votes. Frame all outreach around the launch moment and the product, not the voting mechanic.</div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">PH Page Images</div>
+          <div class="track-count"><span style='color:#fcd34d;'>Kyle · Before Apr 13</span></div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Update all product images on PH listing using Sector Scavengers collections pages. Demonstrates Collections in context, repositions brand around art.
+        </div>
       </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">Sizzle Reel — Collections (30–60 sec)</div>
-        <div class="track-count" style="color:#f87171;">Required before launch · Kyle + Cesar + Ukin</div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">90/10 Principle</div>
+          <div class="track-count">Tony V / Kyle 1:1 · Ongoing</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          90% of time designing and building tests for new efforts. 10% executing current defined mechanism.
+        </div>
       </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        Must be produced before launch day. Use Sector Scavengers collections pages as the visual source. Coordinate with Cesar and Ukin — do not interrupt their assigned tasks before the launch window opens. Predzor handles commercial sizzle reels; in-house handles PH video.
-      </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">PH Page — Images Need Updating</div>
-        <div class="track-count" style="color:#fcd34d;">Kyle · Before Apr 13</div>
-      </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        Update all product images on the Product Hunt listing. Use Sector Scavengers collections pages as the visual driver — this demonstrates Collections in context and repositions the brand around art.
-      </div>
-    </div>
-
-    <div class="track">
-      <div class="track-header">
-        <div class="track-label">90/10 Time Allocation — Tony V / Kyle 1:1</div>
-        <div class="track-count">Apr 6 · Ongoing principle</div>
-      </div>
-      <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        90% of time on designing and building reasonable tests for new efforts. 10% on executing the current defined mechanism. Applied to Kyle's workload going into PH launch period.
       </div>
     </div>
-
   </div>
 
-  <!-- ============================================================ -->
-  <!-- MEETING LOG -->
-  <!-- ============================================================ -->
-  <div class="ops-section">
-    <div class="ops-section-heading">
-      Meeting Log
-      <span>Decisions and action items only</span>
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('growth_strategy')">
+      <div>
+        <div class="collapsible-title">Growth Strategy</div>
+        <div class="collapsible-meta">Apr 6 · Kyle &lt;&gt; Tony 1:1 · Confirmed priorities</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-growth_strategy">▶</span>
     </div>
-
-    <div style="display:flex;flex-direction:column;gap:12px;">
-
+    <div class="collapsible-body" id="sec-growth_strategy">
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:4px;">
       <div class="track">
         <div class="track-header">
-          <div class="track-label">Weekly Marketing</div>
-          <div class="track-count">Apr 6 · Kyle · Zac · Tony V · Ukin · Cesar</div>
+          <div class="track-label">SEO + Backlinks</div>
+          <div class="track-count">Target: 400–500 · Rosebud ~500, Ludo ~390</div>
         </div>
-        <div class="track-body">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Decisions</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;display:flex;flex-direction:column;gap:3px;margin-bottom:14px;">
-            <div>PH launch postponed to align with Collections video and shorts — reposition brand around art before launch window opens.</div>
-            <div>Sizzle reel (30–60 sec) for Collections required before launch. Use Sector Scavengers collections pages as the visual driver.</div>
-            <div>5 press release emails go out 48 hours before launch. Launch email fires at the same minute the listing goes live.</div>
-            <div>Purchase features on AI tool finders to boost PH votes. Paid directory purchases timed to launch window.</div>
-            <div>Organic vote strategy: Reddit, YouTube Shorts, and direct email to existing users are the three strongest channels. Do not explicitly ask for votes.</div>
-            <div>YouTube is confirmed as the primary growth engine — 40–50 signups per video launch, accelerating. Protect this pipeline.</div>
-            <div>$1,500 Predzor budget allocated to commercial marketing beats and sizzle reels, not educational content. In-house team handles educational and PH video.</div>
-            <div>Do not map video content more than 6 weeks out — product interface expected to change significantly.</div>
-            <div>Art pipeline video (solo devs) on track for Friday. Collections video shipped last Friday.</div>
-            <div>Inactive user feedback email going out this week (30–60 day segment). Credit distribution for respondents — coordinate with Dragoon.</div>
-            <div>Paying indie dev $100 for product feedback call. Record it. Potential case study material.</div>
-            <div>Tony V / Kyle 1:1 agenda: 90/10 time allocation — 90% designing and building tests for new efforts, 10% executing current defined mechanism.</div>
-          </div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Action Items — <span style="color:#f87171;">Priority flagged</span></div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;display:flex;flex-direction:column;gap:3px;">
-            <div><span style="color:#f87171;font-weight:600;">🔴 Kyle</span> — Coordinate with Cesar + Ukin to produce Collections sizzle reel (30–60 sec). Do not interrupt assigned tasks before PH launch.</div>
-            <div><span style="color:#f87171;font-weight:600;">🔴 Kyle</span> — Draft PH launch email. Fires at the same minute the listing goes live. Must be top-tier — primary traffic driver.</div>
-            <div><span style="color:#f87171;font-weight:600;">🔴 Kyle</span> — Send 5 press release emails 48 hours before launch. Target outlets for blog coverage.</div>
-            <div><span style="color:#f87171;font-weight:600;">🔴 Kyle</span> — Update all product images on PH page. Use Sector Scavengers collections pages as visual source.</div>
-            <div><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Update marketing calendar: map all published videos accurately. Add Animation Overhaul to Week 4.</div>
-            <div><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Upload updated backlink doc to GitHub. Fix GitHub link so it functions correctly.</div>
-            <div><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Send inactive user feedback email (30–60 day segment). Discuss credit distribution with Dragoon.</div>
-            <div><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Monitor Ukin's first Collections short delivery by 14:00–15:00 today. Use backlog video if not delivered.</div>
-            <div><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Add these meeting notes to team context tab. Prioritize all outstanding items.</div>
-            <div><span style="color:#2dd4bf;">Cesar</span> — Send 12 shorts + transcripts to Ukin from last two videos.</div>
-            <div><span style="color:#2dd4bf;">Cesar</span> — Create video production document for Predzor. Record all necessary footage today and tomorrow.</div>
-            <div><span style="color:#2dd4bf;">Tony V</span> — Schedule and record Google Meet with Jeremy + indie dev for $100 feedback call. Explore case study potential.</div>
-            <div><span style="color:#2dd4bf;">Tony V</span> — Raise tile sets and animation overhaul release windows in upcoming standup with product. Determine nature of launches before building marketing beats.</div>
-          </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Machine is running. Pull competitor backlinks via Bing, export CSV, prioritize by domain rating using Claude, outreach in batches. Monthly review of master keyword doc for YouTube.
         </div>
       </div>
-
       <div class="track">
         <div class="track-header">
-          <div class="track-label">Product Brainstorming</div>
-          <div class="track-count">Apr 2 · Kyle · Brandon · Zac · Cesar · Jeremy · Tony V · Mike Hayes</div>
+          <div class="track-label">Press Release — PH Launch</div>
+          <div class="track-count">~$500 over the wire · Hannah advising on timing</div>
         </div>
-        <div class="track-body">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Decisions</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;display:flex;flex-direction:column;gap:3px;margin-bottom:14px;">
-            <div>Tile sets = critical MLP blocker. Don't oversell game-building until it ships.</div>
-            <div>Animation pipeline gets a full redo. Animate any generated asset.</div>
-            <div>Paywall aggressively: simultaneous iteration, mass export, sprite sheet options all gated to paid.</div>
-            <div>6-week max planning horizon for content.</div>
-            <div>Organize videos around game types, not feature deep dives.</div>
-            <div>Reference images have larger style impact than expected — document this for users.</div>
-            <div>Add "template" to prompt explicitly to generate TCG card templates.</div>
-            <div>UI: add visual thumbnail next to perspective selection options.</div>
-            <div>Art Studio is the priority. Code Studio is deprioritized.</div>
-          </div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Action Items</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;display:flex;flex-direction:column;gap:3px;">
-            <div><span style="color:#fcd34d;">Team</span> — Define paywall feature list: free vs. paid</div>
-            <div><span style="color:#fcd34d;">Brandon</span> — Fix generation bug (over-limit creates) · Update session cron logic · Log reference image auto-select bug</div>
-            <div><span style="color:#fcd34d;">Jeremy</span> — Redo full animation pipeline top to bottom</div>
-            <div><span style="color:#fcd34d;">Brandon</span> — Build sprite sheet workflow and export features</div>
-            <div><span style="color:#fcd34d;">Team</span> — Add visual examples to UI tooltips · Create view perspective examples</div>
-            <div><span style="color:#fcd34d;">Cesar</span> — Use meeting notes for video ideation. Focus on target user needs.</div>
-            <div><span style="color:#fcd34d;">Tony V</span> — Research ad strategy: concept images, spriting, animations, tile sets</div>
-          </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Distribute over the wire targeting Yahoo Finance and aggregators. Timing: Friday before or Monday after launch. Dean Takahashi (VentureBeat/GamesBeat) — Tony V coordinating intro via Dave + Mike.
         </div>
       </div>
-
       <div class="track">
         <div class="track-header">
-          <div class="track-label">Marketing Review</div>
-          <div class="track-count">Apr 2 · Kyle · Zac · Tony V · Ukin · Cesar</div>
+          <div class="track-label">UGC + Discord</div>
+          <div class="track-count">Art community · Post-PH activation</div>
         </div>
-        <div class="track-body">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Decisions</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;display:flex;flex-direction:column;gap:3px;margin-bottom:14px;">
-            <div>"Good enough" video philosophy adopted — day 2–3 after feature access, don't wait for polish.</div>
-            <div>No more video series — standalone videos only.</div>
-            <div>Cesar narrates all short-form. Ukin edits.</div>
-            <div>Paid backlink submissions approved — manual only, no bots. Conditional on confirming no negative SEO impact.</div>
-            <div>Bing Webmaster confirmed as the tool for competitor backlink analysis.</div>
-            <div>PostHog review: 1 hour, 1–2x per week, 5 recordings. Kyle + Cesar.</div>
-            <div>Next predicted release: mass export or "animate anything" — potentially within 14 days.</div>
-          </div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Action Items</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;display:flex;flex-direction:column;gap:3px;">
-            <div><span style="color:#fcd34d;">Cesar</span> — Synthesize dev call notes. Send feature priority list to Jeremy + Brandon.</div>
-            <div><span style="color:#fcd34d;">Kyle</span> — Review Healthwired Games / Diego feedback for feature gaps.</div>
-            <div><span style="color:#fcd34d;">Kyle</span> — Grant Cesar PostHog access.</div>
-            <div><span style="color:#fcd34d;">Kyle</span> — Confirm paid backlinks are manual before approving spend.</div>
-            <div><span style="color:#fcd34d;">Cesar</span> — Send 2-second blue background clip to Ukin.</div>
-            <div><span style="color:#fcd34d;">Ukin</span> — Complete flash shorts. Long-form ready by next Thursday.</div>
-            <div><span style="color:#fcd34d;">Tony V</span> — Coordinate with Jeremy on content rollout for prop animation release.</div>
-          </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Discord currently inactive. Activate via contests or game jams to drive content creation. Q&A / focus group post-PH launch — offer free credits as incentive to capture new PH customers.
         </div>
       </div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">B2B Outreach</div>
+          <div class="track-count">Confirmed · 5–6 hrs/wk</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Claude generates HubSpot-style CRM of target businesses and outreach blurbs. All sent emails documented in Growth Ops tab. Tony V supplying LinkedIn contacts.
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Dragoon — itch.io Asset Pack</div>
+          <div class="track-count">Research → Create → Publish → Case Study</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          Research popular AI-created asset pack, note what Makko can/can't produce, create it, publish for sale. Doubles as a marketing case study.
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-header">
+          <div class="track-label">Weekly Tracking</div>
+          <div class="track-count">Monday + Thursday marketing meetings</div>
+        </div>
+        <div class="track-body" style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+          SEO backlink tracking formalized in weekly meetings. WRAP tab tracks accomplishments, plans, and blockers for all contributors.
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('meeting_log')">
+      <div>
+        <div class="collapsible-title">Meeting Log</div>
+        <div class="collapsible-meta">All meetings · Most recent first · Click meeting to expand</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-meeting_log">▶</span>
+    </div>
+    <div class="collapsible-body" id="sec-meeting_log">
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:4px;">
+      <div style="border:1px solid var(--b-medium);border-radius:6px;overflow:hidden;margin-bottom:2px;">
+        <div class="collapsible-header" style="border-radius:0;" onclick="toggleSection('kyle__tony_1:1apr_6,_2026__kyle__to')">
+          <div>
+            <div class="collapsible-title">Kyle &lt;&gt; Tony 1:1</div>
+            <div class="collapsible-meta">Apr 6, 2026 · Kyle · Tony V</div>
+          </div>
+          <span class="collapsible-arrow open" id="arr-kyle__tony_1:1apr_6,_2026__kyle__to">▶</span>
+        </div>
+        <div class="collapsible-body open" id="sec-kyle__tony_1:1apr_6,_2026__kyle__to" style="padding:14px 16px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Decisions</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;margin-bottom:14px;"><div style="margin-bottom:3px;">SEO + YouTube machine is running. Bandwidth now exists for new channel investment — backlinks to 400–500, monthly keyword doc review.</div><div style="margin-bottom:3px;">Press release confirmed for PH launch. ~$500 over the wire. Friday before or Monday after — Hannah advises on timing.</div><div style="margin-bottom:3px;">B2B outreach confirmed worthwhile. 5–6 hrs/wk. Claude generates CRM and blurbs. All emails in Growth Ops tab.</div><div style="margin-bottom:3px;">UGC essential for art community growth. Discord needs activation via contests or game jams. Q&A saved post-PH.</div><div style="margin-bottom:3px;">Dragoon tasked with itch.io asset pack: research, create with Makko, publish and sell. Doubles as case study.</div><div style="margin-bottom:3px;">Weekly SEO backlink tracking added to Monday + Thursday meetings. WRAP tab added to calendar.</div><div style="margin-bottom:3px;">Swap email weeks 3 and 4 to allow Q&A planning time.</div><div style="margin-bottom:3px;">90/10 principle: 90% designing tests for new efforts, 10% executing current mechanism.</div></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Action Items</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;"><div style="margin-bottom:3px;"><span style="color:#f87171;font-weight:600;">🔴 Kyle</span> — Create PH press release. Consult Claude for optimal send timing. Send recommendation to Hannah.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Generate B2B CRM using Claude. Request outreach blurbs. Document all sent emails in Growth Ops tab.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Kick off Dragoon on itch.io asset pack research and creation.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Add WRAP tab to calendar. Swap email weeks 3 and 4.</div><div style="margin-bottom:3px;"><span style="color:#2dd4bf;">Tony V</span> — Coordinate intro to Dean Takahashi via Dave and Mike.</div><div style="margin-bottom:3px;"><span style="color:#2dd4bf;">Tony V</span> — Review B2B Growth Ops data, feedback on outreach emails, supply LinkedIn contacts.</div><div style="margin-bottom:3px;"><span style="color:#2dd4bf;">Tony V</span> — Consult Hannah on press release timing.</div><div style="margin-bottom:3px;"><span style="color:#2dd4bf;">Dragoon</span> — Research popular AI asset pack on itch.io. Note what Makko can/cannot produce. Create and prepare for sale.</div></div>
+        </div>
+      </div>
+      <div style="border:1px solid var(--b-medium);border-radius:6px;overflow:hidden;margin-bottom:2px;">
+        <div class="collapsible-header" style="border-radius:0;" onclick="toggleSection('weekly_marketingapr_6,_2026__kyle')">
+          <div>
+            <div class="collapsible-title">Weekly Marketing</div>
+            <div class="collapsible-meta">Apr 6, 2026 · Kyle · Zac · Tony V · Ukin · Cesar</div>
+          </div>
+          <span class="collapsible-arrow" id="arr-weekly_marketingapr_6,_2026__kyle">▶</span>
+        </div>
+        <div class="collapsible-body" id="sec-weekly_marketingapr_6,_2026__kyle" style="padding:14px 16px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Decisions</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;margin-bottom:14px;"><div style="margin-bottom:3px;">PH launch postponed to align with Collections video and shorts — reposition brand around art first.</div><div style="margin-bottom:3px;">Sizzle reel (30–60 sec) required before launch. Use Sector Scavengers collections pages as visual driver.</div><div style="margin-bottom:3px;">5 press release emails go out 48hrs before launch. Launch email fires at the exact minute listing goes live.</div><div style="margin-bottom:3px;">Organic vote strategy: Reddit, YouTube Shorts, direct email to existing users. No explicit vote asks.</div><div style="margin-bottom:3px;">YouTube confirmed primary growth engine — 40–50 signups/launch, accelerating. Protect this pipeline.</div><div style="margin-bottom:3px;">$1,500 Predzor budget for commercial marketing beats only. In-house team handles educational + PH video.</div><div style="margin-bottom:3px;">Do not map video content more than 6 weeks out — product interface expected to change significantly.</div><div style="margin-bottom:3px;">Inactive user feedback email going out this week (30–60 day segment). Coordinate credits with Dragoon.</div><div style="margin-bottom:3px;">Paying indie dev $100 for product feedback call. Record it — potential case study.</div></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Action Items</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;"><div style="margin-bottom:3px;"><span style="color:#f87171;font-weight:600;">🔴 Kyle</span> — Coordinate with Cesar + Ukin to produce Collections sizzle reel. Do not interrupt assigned tasks.</div><div style="margin-bottom:3px;"><span style="color:#f87171;font-weight:600;">🔴 Kyle</span> — Draft PH launch email. Fires at launch minute. Must be top-tier — primary traffic driver.</div><div style="margin-bottom:3px;"><span style="color:#f87171;font-weight:600;">🔴 Kyle</span> — Send 5 press release emails 48hrs before launch.</div><div style="margin-bottom:3px;"><span style="color:#f87171;font-weight:600;">🔴 Kyle</span> — Update all product images on PH page using Sector Scavengers collections pages.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Update marketing calendar. Add Animation Overhaul to Week 4.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;font-weight:600;">🟡 Kyle</span> — Send inactive user feedback email (30–60 day segment). Discuss credits with Dragoon.</div><div style="margin-bottom:3px;"><span style="color:#2dd4bf;">Cesar</span> — Send 12 shorts + transcripts to Ukin from last two videos.</div><div style="margin-bottom:3px;"><span style="color:#2dd4bf;">Cesar</span> — Create video production doc for Predzor. Record footage today and tomorrow.</div><div style="margin-bottom:3px;"><span style="color:#2dd4bf;">Tony V</span> — Schedule Google Meet with Jeremy + indie dev for $100 feedback call.</div><div style="margin-bottom:3px;"><span style="color:#2dd4bf;">Tony V</span> — Raise tile sets and animation overhaul release windows in product standup.</div></div>
+        </div>
+      </div>
+      <div style="border:1px solid var(--b-medium);border-radius:6px;overflow:hidden;margin-bottom:2px;">
+        <div class="collapsible-header" style="border-radius:0;" onclick="toggleSection('product_brainstormingapr_2,_2026__k')">
+          <div>
+            <div class="collapsible-title">Product Brainstorming</div>
+            <div class="collapsible-meta">Apr 2, 2026 · Kyle · Brandon · Zac · Cesar · Jeremy · Tony V · Mike Hayes</div>
+          </div>
+          <span class="collapsible-arrow" id="arr-product_brainstormingapr_2,_2026__k">▶</span>
+        </div>
+        <div class="collapsible-body" id="sec-product_brainstormingapr_2,_2026__k" style="padding:14px 16px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Decisions</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;margin-bottom:14px;"><div style="margin-bottom:3px;">Tile sets = critical MLP blocker. Don't oversell game-building until it ships.</div><div style="margin-bottom:3px;">Animation pipeline gets a full redo. Animate any generated asset.</div><div style="margin-bottom:3px;">Paywall aggressively: simultaneous iteration, mass export, sprite sheet options all gated to paid.</div><div style="margin-bottom:3px;">6-week max planning horizon for content.</div><div style="margin-bottom:3px;">Organize videos around game types, not feature deep dives.</div><div style="margin-bottom:3px;">Reference images have larger style impact than expected — document for users.</div><div style="margin-bottom:3px;">Add "template" to prompt explicitly to generate TCG card templates.</div><div style="margin-bottom:3px;">Art Studio is the priority. Code Studio deprioritized.</div></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Action Items</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;"><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Team</span> — Define paywall feature list: free vs. paid.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Brandon</span> — Fix generation bug · Update session cron logic · Log reference image auto-select bug.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Jeremy</span> — Redo full animation pipeline top to bottom.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Brandon</span> — Build sprite sheet workflow and export features.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Cesar</span> — Use meeting notes for video ideation. Focus on target user needs.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Tony V</span> — Research ad strategy: concept images, spriting, animations, tile sets.</div></div>
+        </div>
+      </div>
+      <div style="border:1px solid var(--b-medium);border-radius:6px;overflow:hidden;margin-bottom:2px;">
+        <div class="collapsible-header" style="border-radius:0;" onclick="toggleSection('marketing_reviewapr_2,_2026__kyle')">
+          <div>
+            <div class="collapsible-title">Marketing Review</div>
+            <div class="collapsible-meta">Apr 2, 2026 · Kyle · Zac · Tony V · Ukin · Cesar</div>
+          </div>
+          <span class="collapsible-arrow" id="arr-marketing_reviewapr_2,_2026__kyle">▶</span>
+        </div>
+        <div class="collapsible-body" id="sec-marketing_reviewapr_2,_2026__kyle" style="padding:14px 16px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Decisions</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;margin-bottom:14px;"><div style="margin-bottom:3px;">"Good enough" video philosophy adopted — day 2–3 after feature access, don't wait for polish.</div><div style="margin-bottom:3px;">No more video series — standalone videos only.</div><div style="margin-bottom:3px;">Cesar narrates all short-form. Ukin edits.</div><div style="margin-bottom:3px;">Paid backlink submissions approved — manual only, no bots.</div><div style="margin-bottom:3px;">Bing Webmaster confirmed for competitor backlink analysis.</div><div style="margin-bottom:3px;">PostHog review: 1 hour, 1–2x per week, 5 recordings. Kyle + Cesar.</div><div style="margin-bottom:3px;">Next predicted release: mass export or "animate anything" — potentially within 14 days.</div></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Action Items</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.85;"><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Cesar</span> — Synthesize dev call notes. Send feature priority list to Jeremy + Brandon.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Kyle</span> — Review Healthwired Games / Diego feedback for feature gaps.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Kyle</span> — Grant Cesar PostHog access.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Kyle</span> — Confirm paid backlinks are manual before approving spend.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Cesar</span> — Send 2-second blue background clip to Ukin.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Ukin</span> — Complete flash shorts. Long-form ready by next Thursday.</div><div style="margin-bottom:3px;"><span style="color:#fcd34d;">Tony V</span> — Coordinate with Jeremy on content rollout for prop animation release.</div></div>
+        </div>
+      </div>
+      </div>
     </div>
   </div>
 
 </div>
-</div><!-- end tab-context --><div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()">
+</div><!-- end tab-context -->
+
+<div class="tab-panel" id="tab-wrap">
+<div class="ops-page">
+
+  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">WRAP — Weekly Review of Actions &amp; Progress</div>
+  </div>
+  <p style="font-size:11px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;letter-spacing:0.04em;margin-bottom:20px;">W · What got done &nbsp;|&nbsp; R · Roadblocks &nbsp;|&nbsp; A · Actions in flight &nbsp;|&nbsp; P · Plan for next week</p>
+
+  <div class="wrap-week">
+    <div class="wrap-week-header" onclick="toggleWrapWeek('wrap_Apr_6_–_Apr_12_2026')">
+      <div class="wrap-week-label">Week of Apr 6–12, 2026</div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="wrap-week-date">Apr 6 – Apr 12, 2026</div>
+        <span class="collapsible-arrowopen" id="arr-wrap_Apr_6_–_Apr_12_2026">▶</span>
+      </div>
+    </div>
+    <div class="wrap-week-body open" id="sec-wrap_Apr_6_–_Apr_12_2026">
+        <div class="wrap-card">
+          <div class="wrap-card-name kyle">Kyle</div>
+          <div class="wrap-section-label">W — What got done</div>
+          <div class="wrap-item">✓ Articles 06 + 07 live on Ghost, cross-posted to dev.to, Medium, Hashnode</div><div class="wrap-item">✓ 47 backlinks confirmed in Ahrefs — added all to calendar</div><div class="wrap-item">✓ Apr 6 Weekly Marketing + Kyle/Tony 1:1 notes added to Team Context</div><div class="wrap-item">✓ GamesPress press release emailed — embargoed to Apr 13</div><div class="wrap-item">✓ 12 new backlinks gained over the weekend</div>
+          <div class="wrap-section-label">R — Roadblocks</div>
+          <div class="wrap-item wrap-empty">None logged</div>
+          <div class="wrap-section-label">A — Actions in flight</div>
+          <div class="wrap-item">→ PH sizzle reel coordination with Cesar + Ukin</div><div class="wrap-item">→ Draft PH launch email</div><div class="wrap-item">→ Update PH product images (Sector Scavengers)</div><div class="wrap-item">→ B2B CRM generation via Claude</div><div class="wrap-item">→ Inactive user feedback email (30–60 day segment)</div>
+          <div class="wrap-section-label">P — Plan for next week</div>
+          <div class="wrap-item">↗ Send 5 press release emails 48hrs before Apr 13</div><div class="wrap-item">↗ Monitor PH launch — respond to comments in real time</div><div class="wrap-item">↗ Kick off Dragoon on itch.io asset pack</div><div class="wrap-item">↗ Swap email weeks 3 and 4</div>
+        </div>        <div class="wrap-card">
+          <div class="wrap-card-name zac">Zac</div>
+          <div class="wrap-section-label">W — What got done</div>
+          <div class="wrap-empty">Nothing logged yet</div>
+          <div class="wrap-section-label">R — Roadblocks</div>
+          <div class="wrap-item wrap-empty">None logged</div>
+          <div class="wrap-section-label">A — Actions in flight</div>
+          <div class="wrap-item">→ Discord management and community outreach</div><div class="wrap-item">→ Reddit presence and community engagement</div>
+          <div class="wrap-section-label">P — Plan for next week</div>
+          <div class="wrap-item">↗ Begin asset pack research on itch.io</div>
+        </div>        <div class="wrap-card">
+          <div class="wrap-card-name cesar">Cesar</div>
+          <div class="wrap-section-label">W — What got done</div>
+          <div class="wrap-item">✓ Collections video published Friday Apr 3</div><div class="wrap-item">✓ Sent shorts + transcripts to Ukin</div>
+          <div class="wrap-section-label">R — Roadblocks</div>
+          <div class="wrap-item wrap-empty">None logged</div>
+          <div class="wrap-section-label">A — Actions in flight</div>
+          <div class="wrap-item">→ Send 12 shorts + transcripts to Ukin from last two videos</div><div class="wrap-item">→ Create video production doc for Predzor</div><div class="wrap-item">→ Record footage for Predzor today and tomorrow</div><div class="wrap-item">→ Art pipeline (solo devs) video ready by Friday Apr 10</div>
+          <div class="wrap-section-label">P — Plan for next week</div>
+          <div class="wrap-item">↗ Prepare shorts pipeline for week of Apr 13 PH launch</div>
+        </div>        <div class="wrap-card">
+          <div class="wrap-card-name tony">Tony V</div>
+          <div class="wrap-section-label">W — What got done</div>
+          <div class="wrap-item">✓ Weekly marketing meeting facilitated</div><div class="wrap-item">✓ Kyle/Tony 1:1 complete — priorities aligned</div>
+          <div class="wrap-section-label">R — Roadblocks</div>
+          <div class="wrap-item wrap-empty">None logged</div>
+          <div class="wrap-section-label">A — Actions in flight</div>
+          <div class="wrap-item">→ Coordinate intro to Dean Takahashi via Dave + Mike</div><div class="wrap-item">→ Review B2B Growth Ops data and feedback on outreach emails</div><div class="wrap-item">→ Schedule indie dev $100 feedback call</div><div class="wrap-item">→ Raise tile sets + animation overhaul release windows in product standup</div>
+          <div class="wrap-section-label">P — Plan for next week</div>
+          <div class="wrap-item">↗ Consult Hannah on press release timing</div><div class="wrap-item">↗ Supply LinkedIn contacts list for B2B CRM</div>
+        </div>
+    </div>
+  </div>
+
+</div>
+</div><!-- end tab-wrap --><div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()">
   <div class="modal">
     <div class="modal-top">
       <div>
@@ -2810,12 +3033,23 @@ body{
 </div>
 
 <script>
+
+// ── collapsible sections ──
+function toggleSection(id){
+  const body = document.getElementById('sec-'+id);
+  const arr  = document.getElementById('arr-'+id);
+  if(!body) return;
+  const open = body.classList.toggle('open');
+  if(arr){ arr.classList.toggle('open', open); }
+}
+function toggleWrapWeek(id){ toggleSection(id); }
+
 // ── tab switching ──
 function showTab(id) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  const idx = ['tab-prework','tab-calendar','tab-ops','tab-backlinks','tab-invest','tab-context'].indexOf(id);
+  const idx = ['tab-prework','tab-calendar','tab-ops','tab-backlinks','tab-invest','tab-context','tab-wrap'].indexOf(id);
   document.querySelectorAll('.tab-btn')[idx].classList.add('active');
   if(id==='tab-calendar'){
     const page=document.getElementById('page');
