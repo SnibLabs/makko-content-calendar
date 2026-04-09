@@ -793,7 +793,7 @@ body{
   </div>
   <div class="cmd-stat">
     <span class="cmd-stat-label">Social Posts</span>
-    <span class="cmd-stat-value green">34</span>
+    <span class="cmd-stat-value green">43</span>
   </div>
   <div class="cmd-stat">
     <span class="cmd-stat-label">Backlinks Done</span>
@@ -817,6 +817,7 @@ body{
   <button class="tab-btn" onclick="showTab('tab-invest')">Investor Outreach</button>
   <button class="tab-btn" onclick="showTab('tab-context')">Team Context</button>
   <button class="tab-btn" onclick="showTab('tab-wrap')">WRAP</button>
+  <button class="tab-btn" onclick="showTab('tab-analytics')">Analytics</button>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -2758,11 +2759,12 @@ body{
             <div style="font-size:10px;font-weight:700;color:#e05a5a;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Kyle</div>
             <div style="font-size:11px;color:var(--text-secondary);line-height:1.8;">
               → <strong style="color:#ff8c42;">Apr 13 launch day</strong> — midnight email, PH comments all day, Ryan Hoover outreach<br>
-              → Revise press release — align with Apr 7 discussion<br>
-              → Remove white border from founder email button<br>
-              → Define first automated email with Brandon (50 credit / no-sub trigger)<br>
-              → tap4.ai ($10) + theresanaiforthat.com ($50) — submit before Apr 13<br>
-              → Keyword audit: PostHog + competitor + ranking gaps
+              → tap4.ai + theresanaiforthat.com directory submissions — coordinate with Tony before submitting<br>
+              → Automated email templates ready — pending FNAME field group decision<br>
+              → Keyword audit: PostHog + competitor + ranking gaps — in progress<br>
+              <span style="color:#4ade80;">✓ Press release revised — aligned with Apr 7</span><br>
+              <span style="color:#4ade80;">✓ White border removed from founder email button</span><br>
+              <span style="color:#4ade80;">✓ Automated email templates built and staged</span>
             </div>
           </div>
 
@@ -3140,6 +3142,535 @@ body{
 
 </div>
 </div><!-- end tab-wrap -->
+
+<div class="tab-panel" id="tab-analytics">
+<div class="ops-page">
+
+  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Analytics Dashboard</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);">Last updated: Apr 9, 2026 · Data window: last 90 days unless noted</div>
+  </div>
+  <p style="font-size:11px;color:var(--text-muted);margin-bottom:24px;">PostHog · Google Search Console · YouTube Analytics — all sources combined</p>
+
+  <!-- ══ TOP KPI BAR ═════════════════════════════════════════ -->
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:24px;">
+    <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:6px;padding:14px 16px;text-align:center;">
+      <div style="font-size:22px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">1,410</div>
+      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Sign-ups (90d)</div>
+      <div style="font-size:10px;color:#4ade80;margin-top:2px;">↑ 5.5x Feb→Mar</div>
+    </div>
+    <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:6px;padding:14px 16px;text-align:center;">
+      <div style="font-size:22px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">1.9%</div>
+      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Sign-up → Paid</div>
+      <div style="font-size:10px;color:#fcd34d;margin-top:2px;">1 in 53 converts</div>
+    </div>
+    <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:6px;padding:14px 16px;text-align:center;">
+      <div style="font-size:22px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">74,238</div>
+      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">YT Views (90d)</div>
+      <div style="font-size:10px;color:#4ade80;margin-top:2px;">↑3x Jan→Mar</div>
+    </div>
+    <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:6px;padding:14px 16px;text-align:center;">
+      <div style="font-size:22px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">1,542</div>
+      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">GSC Clicks (3mo)</div>
+      <div style="font-size:10px;color:#4ade80;margin-top:2px;">↑2x Jan→Mar</div>
+    </div>
+    <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:6px;padding:14px 16px;text-align:center;">
+      <div style="font-size:22px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">97.7%</div>
+      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Onboarding Compl.</div>
+      <div style="font-size:10px;color:#4ade80;margin-top:2px;">Flow is working</div>
+    </div>
+  </div>
+
+  <!-- ══ ACQUISITION ═════════════════════════════════════════════ -->
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('analytics_acquisition')" style="background:rgba(59,142,223,0.08);border:1px solid rgba(59,142,223,0.25);border-radius:4px;">
+      <div>
+        <div class="collapsible-title">Acquisition — Traffic by Channel</div>
+        <div class="collapsible-meta">PostHog · Last 30 days · makko.ai</div>
+      </div>
+      <span class="collapsible-arrow open" id="arr-analytics_acquisition">▼</span>
+    </div>
+    <div class="collapsible-body open" id="sec-analytics_acquisition" style="padding:16px 0 0 0;">
+
+      <!-- CHANNEL TABLE -->
+      <div style="overflow-x:auto;margin-bottom:16px;">
+        <table style="width:100%;border-collapse:collapse;font-size:11px;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--b-medium);">
+              <th style="padding:8px 12px;text-align:left;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;">Channel</th>
+              <th style="padding:8px 12px;text-align:right;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;">Visits</th>
+              <th style="padding:8px 12px;text-align:right;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;">Sign-ups</th>
+              <th style="padding:8px 12px;text-align:right;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;">Conv. Rate</th>
+              <th style="padding:8px 12px;text-align:left;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--b-medium);">
+              <td style="padding:9px 12px;color:var(--text-primary);font-weight:600;">Direct</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">3,280</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">454</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">13.8%</td>
+              <td style="padding:9px 12px;color:var(--text-muted);">Brand awareness, returning users</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-medium);background:rgba(255,255,255,0.02);">
+              <td style="padding:9px 12px;color:var(--text-primary);font-weight:600;">SEO</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">874</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">294</td>
+              <td style="padding:9px 12px;text-align:right;"><span style="color:#4ade80;font-weight:700;">33.6%</span></td>
+              <td style="padding:9px 12px;color:var(--text-muted);">Highest intent — compounding monthly</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-medium);">
+              <td style="padding:9px 12px;color:var(--text-primary);font-weight:600;">YouTube</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">560</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">180</td>
+              <td style="padding:9px 12px;text-align:right;"><span style="color:#4ade80;font-weight:700;">32.1%</span></td>
+              <td style="padding:9px 12px;color:var(--text-muted);">Primary growth engine — 3x views Jan→Mar</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-medium);background:rgba(255,255,255,0.02);">
+              <td style="padding:9px 12px;color:var(--text-primary);font-weight:600;">Bing</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">67</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">25</td>
+              <td style="padding:9px 12px;text-align:right;"><span style="color:#4ade80;font-weight:700;">37.3%</span></td>
+              <td style="padding:9px 12px;color:var(--text-muted);">Highest conv. rate of any channel</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-medium);">
+              <td style="padding:9px 12px;color:var(--text-primary);font-weight:600;">Facebook</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">94</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">17</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">18.1%</td>
+              <td style="padding:9px 12px;color:var(--text-muted);"></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-medium);background:rgba(255,255,255,0.02);">
+              <td style="padding:9px 12px;color:var(--text-primary);font-weight:600;">Blog</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">130</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">21</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">16.2%</td>
+              <td style="padding:9px 12px;color:var(--text-muted);">Early compounding phase — growing fast</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-medium);">
+              <td style="padding:9px 12px;color:var(--text-primary);font-weight:600;">Reddit</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">264</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">8</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">3.0%</td>
+              <td style="padding:9px 12px;color:var(--text-muted);">Volume driver — low direct conversion</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-medium);background:rgba(255,255,255,0.02);">
+              <td style="padding:9px 12px;color:var(--text-primary);font-weight:600;">Twitter/X</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">84</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">3</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">3.6%</td>
+              <td style="padding:9px 12px;color:var(--text-muted);"></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-medium);">
+              <td style="padding:9px 12px;color:var(--text-primary);font-weight:600;">LinkedIn</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">22</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">0</td>
+              <td style="padding:9px 12px;text-align:right;color:#f87171;">0%</td>
+              <td style="padding:9px 12px;color:var(--text-muted);">Awareness only at current stage</td>
+            </tr>
+            <tr style="background:rgba(45,212,191,0.06);border-bottom:1px solid rgba(45,212,191,0.2);">
+              <td style="padding:9px 12px;color:#2dd4bf;font-weight:600;">Gemini ⚠️</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">21</td>
+              <td style="padding:9px 12px;text-align:right;color:var(--text-secondary);">8</td>
+              <td style="padding:9px 12px;text-align:right;"><span style="color:#2dd4bf;font-weight:700;">38%</span></td>
+              <td style="padding:9px 12px;color:#2dd4bf;">Early GEO signal — watch this</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- BAR CHART: Channel visits -->
+      <div style="margin-bottom:20px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Visits by channel (30d)</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;align-items:center;gap:8px;"><div style="width:80px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">Direct</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:18px;"><div style="width:100%;background:#3b8edf;border-radius:2px;height:18px;display:flex;align-items:center;padding-left:8px;"><span style="font-size:10px;color:#fff;font-family:'IBM Plex Mono',monospace;">3,280</span></div></div></div>
+          <div style="display:flex;align-items:center;gap:8px;"><div style="width:80px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">SEO</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:18px;"><div style="width:26.6%;background:#2dd4bf;border-radius:2px;height:18px;display:flex;align-items:center;padding-left:8px;"><span style="font-size:10px;color:#0d1524;font-family:'IBM Plex Mono',monospace;">874</span></div></div></div>
+          <div style="display:flex;align-items:center;gap:8px;"><div style="width:80px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">YouTube</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:18px;"><div style="width:17.1%;background:#2dd4bf;border-radius:2px;height:18px;display:flex;align-items:center;padding-left:8px;"><span style="font-size:10px;color:#0d1524;font-family:'IBM Plex Mono',monospace;">560</span></div></div></div>
+          <div style="display:flex;align-items:center;gap:8px;"><div style="width:80px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">Reddit</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:18px;"><div style="width:8.0%;background:#f5a623;border-radius:2px;height:18px;display:flex;align-items:center;padding-left:8px;"><span style="font-size:10px;color:#0d1524;font-family:'IBM Plex Mono',monospace;">264</span></div></div></div>
+          <div style="display:flex;align-items:center;gap:8px;"><div style="width:80px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">Facebook</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:18px;"><div style="width:2.9%;background:#6b7280;border-radius:2px;height:18px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:8px;"><div style="width:80px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">Blog</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:18px;"><div style="width:4.0%;background:#6b7280;border-radius:2px;height:18px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:8px;"><div style="width:80px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">Twitter/X</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:18px;"><div style="width:2.6%;background:#6b7280;border-radius:2px;height:18px;"></div></div></div>
+        </div>
+      </div>
+
+      <!-- SIGNAL BOX: Throwaway emails -->
+      <div style="background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.25);border-radius:4px;padding:10px 14px;font-size:11px;color:var(--text-secondary);">
+        <strong style="color:#f5a623;">⚠️ Monitor:</strong> Temp-mail domains showing ~29 sign-ups — throwaway email activity. Flag for suppression logic in cohort email system.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ CONVERSION FUNNEL ═════════════════════════════════════════ -->
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('analytics_funnel')">
+      <div>
+        <div class="collapsible-title">Conversion Funnel — Last 90 Days</div>
+        <div class="collapsible-meta">PostHog · Feb – Apr 2026 · Full sign-up to purchase pipeline</div>
+      </div>
+      <span class="collapsible-arrow open" id="arr-analytics_funnel">▼</span>
+    </div>
+    <div class="collapsible-body open" id="sec-analytics_funnel" style="padding:16px 0 0 0;">
+
+      <!-- FUNNEL VISUAL -->
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-bottom:16px;align-items:end;">
+
+        <div style="text-align:center;">
+          <div style="font-size:10px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;margin-bottom:6px;text-transform:uppercase;">Sign-ups</div>
+          <div style="background:#3b8edf;border-radius:4px 4px 0 0;height:160px;display:flex;align-items:flex-start;justify-content:center;padding-top:10px;">
+            <span style="font-size:16px;font-weight:700;color:#fff;font-family:'IBM Plex Mono',monospace;">1,410</span>
+          </div>
+          <div style="background:rgba(59,142,223,0.2);padding:4px;font-size:10px;color:#3b8edf;">100%</div>
+        </div>
+
+        <div style="text-align:center;">
+          <div style="font-size:10px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;margin-bottom:6px;text-transform:uppercase;">Onboarding</div>
+          <div style="background:#2dd4bf;border-radius:4px 4px 0 0;height:156px;display:flex;align-items:flex-start;justify-content:center;padding-top:10px;">
+            <span style="font-size:16px;font-weight:700;color:#0d1524;font-family:'IBM Plex Mono',monospace;">1,376</span>
+          </div>
+          <div style="background:rgba(45,212,191,0.2);padding:4px;font-size:10px;color:#2dd4bf;">97.7%</div>
+        </div>
+
+        <div style="text-align:center;">
+          <div style="font-size:10px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;margin-bottom:6px;text-transform:uppercase;">Project Created</div>
+          <div style="background:#4ade80;border-radius:4px 4px 0 0;height:61px;display:flex;align-items:flex-start;justify-content:center;padding-top:10px;">
+            <span style="font-size:16px;font-weight:700;color:#0d1524;font-family:'IBM Plex Mono',monospace;">538</span>
+          </div>
+          <div style="background:rgba(74,222,128,0.2);padding:4px;font-size:10px;color:#4ade80;">38.2%</div>
+        </div>
+
+        <div style="text-align:center;">
+          <div style="font-size:10px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;margin-bottom:6px;text-transform:uppercase;">Checkout</div>
+          <div style="background:#f5a623;border-radius:4px 4px 0 0;height:14px;display:flex;align-items:center;justify-content:center;">
+          </div>
+          <div style="background:rgba(245,166,35,0.2);padding:4px;font-size:10px;color:#f5a623;">84 &nbsp;·&nbsp; 5.6%</div>
+          <div style="font-size:10px;color:#f87171;margin-top:2px;">⚠️ Biggest drop</div>
+        </div>
+
+        <div style="text-align:center;">
+          <div style="font-size:10px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;margin-bottom:6px;text-transform:uppercase;">Purchased</div>
+          <div style="background:#9b8fd4;border-radius:4px 4px 0 0;height:4px;">
+          </div>
+          <div style="background:rgba(155,143,212,0.2);padding:4px;font-size:10px;color:#9b8fd4;">27 &nbsp;·&nbsp; 1.9%</div>
+        </div>
+
+      </div>
+
+      <!-- MONTHLY BREAKDOWN TABLE -->
+      <div style="overflow-x:auto;margin-bottom:16px;">
+        <table style="width:100%;border-collapse:collapse;font-size:11px;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--b-medium);">
+              <th style="padding:8px 12px;text-align:left;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;">Stage</th>
+              <th style="padding:8px 12px;text-align:right;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;">Feb</th>
+              <th style="padding:8px 12px;text-align:right;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;">Mar</th>
+              <th style="padding:8px 12px;text-align:right;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;">Apr (9d)</th>
+              <th style="padding:8px 12px;text-align:right;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--b-medium);"><td style="padding:8px 12px;color:var(--text-primary);font-weight:600;">Sign-ups</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">158</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">875</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">377</td><td style="padding:8px 12px;text-align:right;color:var(--text-primary);font-weight:700;">1,410</td></tr>
+            <tr style="border-bottom:1px solid var(--b-medium);background:rgba(255,255,255,0.02);"><td style="padding:8px 12px;color:var(--text-primary);font-weight:600;">Onboarding Completed</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">153</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">855</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">368</td><td style="padding:8px 12px;text-align:right;color:var(--text-primary);font-weight:700;">1,376</td></tr>
+            <tr style="border-bottom:1px solid var(--b-medium);"><td style="padding:8px 12px;color:var(--text-primary);font-weight:600;">Project Created</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">55</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">344</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">139</td><td style="padding:8px 12px;text-align:right;color:var(--text-primary);font-weight:700;">538</td></tr>
+            <tr style="border-bottom:1px solid var(--b-medium);background:rgba(255,255,255,0.02);"><td style="padding:8px 12px;color:#f5a623;font-weight:600;">Checkout Initiated ⚠️</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">11</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">51</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">22</td><td style="padding:8px 12px;text-align:right;color:#f5a623;font-weight:700;">84</td></tr>
+            <tr style="border-bottom:1px solid var(--b-medium);"><td style="padding:8px 12px;color:var(--text-primary);font-weight:600;">Purchase Completed</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">6</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">15</td><td style="padding:8px 12px;text-align:right;color:var(--text-secondary);">6</td><td style="padding:8px 12px;text-align:right;color:var(--text-primary);font-weight:700;">27</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- INSIGHT BOX -->
+      <div style="background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.25);border-radius:4px;padding:10px 14px;font-size:11px;color:var(--text-secondary);">
+        <strong style="color:#f5a623;">🎯 Highest-leverage opportunity:</strong> Project Created → Checkout is dropping 94.4% of users. Checkout → Purchase is healthy at 40.7%. Focus: what gets a user who created a project to start a checkout?
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ YOUTUBE ═════════════════════════════════════════════════════════ -->
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('analytics_youtube')">
+      <div>
+        <div class="collapsible-title">YouTube Analytics</div>
+        <div class="collapsible-meta">Jan 9 – Apr 9, 2026 · 65 videos (48 Shorts, 17 long-form)</div>
+      </div>
+      <span class="collapsible-arrow open" id="arr-analytics_youtube">▼</span>
+    </div>
+    <div class="collapsible-body open" id="sec-analytics_youtube" style="padding:16px 0 0 0;">
+
+      <!-- TOP STATS ROW -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;">
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">74,238</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Total Views</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">524 hrs</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Watch Time</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">+230</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Subscribers</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">4.38%</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Avg CTR</div>
+        </div>
+      </div>
+
+      <!-- MONTHLY VIEWS CHART -->
+      <div style="margin-bottom:16px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Monthly views growth</div>
+        <div style="display:flex;align-items:flex-end;gap:12px;height:100px;">
+          <div style="flex:1;text-align:center;">
+            <div style="background:#3b8edf;border-radius:3px 3px 0 0;height:16px;margin-bottom:4px;"></div>
+            <div style="font-size:10px;color:var(--text-secondary);font-family:'IBM Plex Mono',monospace;">4,957</div>
+            <div style="font-size:9px;color:var(--text-muted);">Jan</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="background:#3b8edf;border-radius:3px 3px 0 0;height:51px;margin-bottom:4px;"></div>
+            <div style="font-size:10px;color:var(--text-secondary);font-family:'IBM Plex Mono',monospace;">15,642</div>
+            <div style="font-size:9px;color:var(--text-muted);">Feb</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="background:#2dd4bf;border-radius:3px 3px 0 0;height:100px;margin-bottom:4px;"></div>
+            <div style="font-size:10px;color:var(--text-secondary);font-family:'IBM Plex Mono',monospace;">30,850</div>
+            <div style="font-size:9px;color:var(--text-muted);">Mar</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="background:#4ade80;border-radius:3px 3px 0 0;height:74px;margin-bottom:4px;position:relative;">
+              <div style="position:absolute;top:-16px;width:100%;text-align:center;font-size:9px;color:#4ade80;font-family:'IBM Plex Mono',monospace;">on pace 75k+</div>
+            </div>
+            <div style="font-size:10px;color:var(--text-secondary);font-family:'IBM Plex Mono',monospace;">22,854*</div>
+            <div style="font-size:9px;color:var(--text-muted);">Apr (9d)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMAT BREAKDOWN -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Shorts (48 videos)</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.8;">
+            Views: <strong style="color:#2dd4bf;">61,514</strong> (82.9% of total)<br>
+            Subscribers: <strong>54</strong> (29.8% of total)<br>
+            Role: <span style="color:#fcd34d;">Reach + discovery</span>
+          </div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Long-form (17 videos)</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.8;">
+            Views: <strong style="color:#2dd4bf;">12,724</strong> (17.1% of total)<br>
+            Subscribers: <strong>127</strong> (70.2% of total)<br>
+            Role: <span style="color:#4ade80;">Subscriber conversion</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP VIDEOS -->
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Top videos</div>
+      <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:12px;">
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-size:11px;color:var(--text-secondary);flex:1;">How to Size Hitboxes Correctly for 2D Game Animations</div>
+          <div style="text-align:right;flex-shrink:0;margin-left:16px;">
+            <div style="font-size:11px;color:#2dd4bf;font-weight:700;">11,106 views</div>
+            <div style="font-size:10px;color:var(--text-muted);">4.38% CTR</div>
+          </div>
+        </div>
+        <div style="background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.2);border-radius:4px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-size:11px;color:var(--text-secondary);">Why Indie Devs Are Switching to AI Sprite Animation</div>
+            <div style="font-size:10px;color:#2dd4bf;margin-top:2px;">⭐ Best overall — high CTR + high impressions + top subscriber driver</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0;margin-left:16px;">
+            <div style="font-size:11px;color:#2dd4bf;font-weight:700;">6,357 views</div>
+            <div style="font-size:10px;color:#2dd4bf;">6.32% CTR · 108 subs</div>
+          </div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-size:11px;color:var(--text-secondary);flex:1;">Makko AI: Build Playable Games Without Manual Coding</div>
+          <div style="text-align:right;flex-shrink:0;margin-left:16px;">
+            <div style="font-size:11px;color:#2dd4bf;font-weight:700;">8.62% CTR</div>
+            <div style="font-size:10px;color:var(--text-muted);">High resonance, lower volume</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.2);border-radius:4px;padding:10px 14px;font-size:11px;color:var(--text-secondary);">
+        <strong style="color:#2dd4bf;">📈 Hitbox series:</strong> 8 videos published Mar–Apr collectively generated 30,000+ views. Top 3 single days ever: Apr 3 (6,168), Mar 31 (5,753), Apr 2 (4,051).
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SEARCH CONSOLE ═════════════════════════════════════════════ -->
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('analytics_gsc')">
+      <div>
+        <div class="collapsible-title">Google Search Console</div>
+        <div class="collapsible-meta">Last 3 months · makko.ai</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-analytics_gsc">▶</span>
+    </div>
+    <div class="collapsible-body" id="sec-analytics_gsc" style="padding:16px 0 0 0;">
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;">
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">1,542</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Total Clicks</div>
+          <div style="font-size:10px;color:#4ade80;margin-top:2px;">↑2x Jan→Mar</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">5,509</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Impressions</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">28%</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Overall CTR</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">2.6</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Avg Position</div>
+        </div>
+      </div>
+
+      <!-- MONTHLY CLICKS -->
+      <div style="margin-bottom:16px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Monthly click growth</div>
+        <div style="display:flex;align-items:flex-end;gap:12px;height:80px;">
+          <div style="flex:1;text-align:center;">
+            <div style="background:#3b8edf;border-radius:3px 3px 0 0;height:42px;margin-bottom:4px;"></div>
+            <div style="font-size:10px;color:var(--text-secondary);font-family:'IBM Plex Mono',monospace;">341</div>
+            <div style="font-size:9px;color:var(--text-muted);">Jan</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="background:#3b8edf;border-radius:3px 3px 0 0;height:46px;margin-bottom:4px;"></div>
+            <div style="font-size:10px;color:var(--text-secondary);font-family:'IBM Plex Mono',monospace;">370</div>
+            <div style="font-size:9px;color:var(--text-muted);">Feb</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="background:#2dd4bf;border-radius:3px 3px 0 0;height:80px;margin-bottom:4px;"></div>
+            <div style="font-size:10px;color:var(--text-secondary);font-family:'IBM Plex Mono',monospace;">649</div>
+            <div style="font-size:9px;color:var(--text-muted);">Mar</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Brand vs Non-Brand</div>
+          <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:8px;">
+            <div style="width:88%;background:#3b8edf;"></div>
+            <div style="width:12%;background:#2dd4bf;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text-muted);">
+            <span><span style="color:#3b8edf;">■</span> Brand 88% (1,384 clicks)</span>
+            <span><span style="color:#2dd4bf;">■</span> Non-brand 12% (158 clicks)</span>
+          </div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:6px;">Non-brand growing — normal at this SEO stage</div>
+        </div>
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Device Split</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.8;">
+            Desktop: <strong>68%</strong> of clicks · 25% CTR<br>
+            Mobile: <strong>31%</strong> of clicks · <span style="color:#4ade80;">37% CTR</span><br>
+            Mobile CTR significantly higher — optimize for mobile intent
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TOP COUNTRIES -->
+      <div style="margin-bottom:16px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Top countries · 60%+ clicks are non-US</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:6px 12px;text-align:center;"><div style="font-size:12px;font-weight:700;color:#2dd4bf;">403</div><div style="font-size:10px;color:var(--text-muted);">US</div></div>
+          <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:6px 12px;text-align:center;"><div style="font-size:12px;font-weight:700;color:var(--text-primary);">111</div><div style="font-size:10px;color:var(--text-muted);">India</div></div>
+          <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:6px 12px;text-align:center;"><div style="font-size:12px;font-weight:700;color:var(--text-primary);">100</div><div style="font-size:10px;color:var(--text-muted);">Brazil</div></div>
+          <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:6px 12px;text-align:center;"><div style="font-size:12px;font-weight:700;color:var(--text-primary);">44</div><div style="font-size:10px;color:var(--text-muted);">Turkey</div></div>
+          <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:6px 12px;text-align:center;"><div style="font-size:12px;font-weight:700;color:var(--text-primary);">43</div><div style="font-size:10px;color:var(--text-muted);">Canada</div></div>
+        </div>
+      </div>
+
+      <!-- NON-BRAND KEYWORDS -->
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Non-brand keyword positions — early signals</div>
+      <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:12px;">
+        <div style="background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.2);border-radius:4px;padding:8px 14px;display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text-secondary);">rosebud ai alternative</span><span style="font-size:11px;color:#2dd4bf;font-weight:700;">Pos 1 · 1 click</span></div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:8px 14px;display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text-secondary);">visual game design tools no code</span><span style="font-size:11px;color:#4ade80;font-weight:700;">Pos 9</span></div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:8px 14px;display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text-secondary);">best ai game maker</span><span style="font-size:11px;color:#fcd34d;font-weight:700;">Pos 12</span></div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:8px 14px;display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text-secondary);">create games with ai free</span><span style="font-size:11px;color:var(--text-muted);">Pos 253 ↑ climbing</span></div>
+      </div>
+
+      <!-- OPPORTUNITY BOX -->
+      <div style="background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.2);border-radius:4px;padding:10px 14px;font-size:11px;color:var(--text-secondary);">
+        <strong style="color:#2dd4bf;">💡 Quick win:</strong> Pricing page has 1,414 impressions at position 1.75 but only 6 clicks (0.4% CTR). The meta description needs improving to capture clicks at a page already ranking #1.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ BLOG ANALYTICS ════════════════════════════════════════════════ -->
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('analytics_blog')">
+      <div>
+        <div class="collapsible-title">Blog Analytics</div>
+        <div class="collapsible-meta">blog.makko.ai · Since late Jan 2026 · PostHog tracking</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-analytics_blog">▶</span>
+    </div>
+    <div class="collapsible-body" id="sec-analytics_blog" style="padding:16px 0 0 0;">
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px;">
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">3,208</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Total Pageviews</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#2dd4bf;font-family:'IBM Plex Mono',monospace;">1,541</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Unique Visitors</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#4ade80;font-family:'IBM Plex Mono',monospace;">12x</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;">Growth in 10 weeks</div>
+          <div style="font-size:10px;color:#4ade80;margin-top:2px;">34 → 409 weekly visitors</div>
+        </div>
+      </div>
+
+      <!-- BLOG TRAFFIC SOURCES -->
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Blog traffic sources</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:90px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">Direct</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:16px;"><div style="width:100%;background:#3b8edf;border-radius:2px;height:16px;display:flex;align-items:center;padding-left:8px;"><span style="font-size:10px;color:#fff;font-family:'IBM Plex Mono',monospace;">1,092</span></div></div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:90px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">Reddit</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:16px;"><div style="width:23.2%;background:#f5a623;border-radius:2px;height:16px;display:flex;align-items:center;padding-left:8px;"><span style="font-size:10px;color:#0d1524;font-family:'IBM Plex Mono',monospace;">253</span></div></div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:90px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">Twitter/X</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:16px;"><div style="width:4.0%;background:#6b7280;border-radius:2px;height:16px;"></div></div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:90px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">itch.io</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:16px;"><div style="width:3.7%;background:#9b8fd4;border-radius:2px;height:16px;"></div></div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:90px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">YouTube</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:16px;"><div style="width:2.5%;background:#6b7280;border-radius:2px;height:16px;"></div></div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:90px;font-size:11px;color:var(--text-secondary);text-align:right;flex-shrink:0;">SEO</div><div style="flex:1;background:rgba(255,255,255,0.06);border-radius:2px;height:16px;"><div style="width:0.5%;background:#2dd4bf;border-radius:2px;height:16px;"></div></div></div>
+      </div>
+
+      <div style="background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.2);border-radius:4px;padding:10px 14px;font-size:11px;color:var(--text-secondary);">
+        Reddit is the primary external blog growth engine right now. Blog SEO is in early compounding phase — content is indexed and rankings are building. Organic growth will begin flowing as domain authority compounds over the next 60–90 days.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ KEY TAKEAWAYS ══════════════════════════════════════════════ -->
+  <div style="background:rgba(255,140,66,0.06);border:1px solid rgba(255,140,66,0.2);border-radius:6px;padding:16px 18px;margin-top:8px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#ff8c42;margin-bottom:12px;">Key Takeaways — What to Act On</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="display:flex;gap:10px;"><div style="color:#4ade80;flex-shrink:0;">→</div><div style="font-size:11px;color:var(--text-secondary);line-height:1.7;"><strong style="color:var(--text-primary);">SEO + YouTube are the two highest-intent channels</strong> at 32–37% sign-up conversion. Both are accelerating. Protect and feed them first.</div></div>
+      <div style="display:flex;gap:10px;"><div style="color:#f5a623;flex-shrink:0;">→</div><div style="font-size:11px;color:var(--text-secondary);line-height:1.7;"><strong style="color:#f5a623;">Funnel bottleneck: Project Created → Checkout (5.6% conversion)</strong>. Onboarding and checkout are both working well. The middle is the problem.</div></div>
+      <div style="display:flex;gap:10px;"><div style="color:#2dd4bf;flex-shrink:0;">→</div><div style="font-size:11px;color:var(--text-secondary);line-height:1.7;"><strong style="color:var(--text-primary);">Pricing page quick win</strong> — 1,414 impressions at position 1.75, only 6 clicks. Meta description update could meaningfully move conversion here with zero effort.</div></div>
+      <div style="display:flex;gap:10px;"><div style="color:#2dd4bf;flex-shrink:0;">→</div><div style="font-size:11px;color:var(--text-secondary);line-height:1.7;"><strong style="color:var(--text-primary);">YouTube is accelerating into April</strong> — on pace for 75K+ views in a single month. Shorts drive reach, long-form drives subscribers. Keep both formats active.</div></div>
+      <div style="display:flex;gap:10px;"><div style="color:#9b8fd4;flex-shrink:0;">→</div><div style="font-size:11px;color:var(--text-secondary);line-height:1.7;"><strong style="color:var(--text-primary);">Gemini is sending traffic at 38% conversion</strong> — early GEO signal worth monitoring. AEO content investment is starting to show up in data.</div></div>
+      <div style="display:flex;gap:10px;"><div style="color:#6b7280;flex-shrink:0;">→</div><div style="font-size:11px;color:var(--text-secondary);line-height:1.7;"><strong style="color:var(--text-primary);">60%+ of search clicks are non-US</strong> — India (111), Brazil (100), Turkey (44) are top markets. Not currently being targeted — opportunity to address.</div></div>
+    </div>
+  </div>
+
+</div>
+</div><!-- end tab-analytics -->
+
 <div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()">
   <div class="modal">
     <div class="modal-top">
@@ -3170,7 +3701,7 @@ function showTab(id) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  const idx = ['tab-prework','tab-calendar','tab-ops','tab-backlinks','tab-invest','tab-context','tab-wrap'].indexOf(id);
+  const idx = ['tab-prework','tab-calendar','tab-ops','tab-backlinks','tab-invest','tab-context','tab-wrap','tab-analytics'].indexOf(id);
   document.querySelectorAll('.tab-btn')[idx].classList.add('active');
   if(id==='tab-calendar'){
     const page=document.getElementById('page');
@@ -3437,6 +3968,26 @@ dayMap[apr8.toDateString()]={
     {label:'Facebook',url:'https://www.facebook.com/reel/2509055876231265/',status:'live'}
   ],
   milestones:['Mailchimp automated email templates live']
+};
+
+// ── Apr 9 — Devlog Social + Short-form Social ────────────────────────────────
+const apr9b=new Date(2026,3,9);
+dayMap[apr9b.toDateString()]={
+  type:'article-pub',
+  week:'Pre',
+  date:apr9b,
+  title:'Apr 9 — Devlog Social + Short-form Social',
+  social:[
+    {label:'Twitter/X (Devlog)',url:'https://x.com/1932459483348779008/status/2042331748529299923',status:'live'},
+    {label:'LinkedIn (Devlog)',url:'https://www.linkedin.com/feed/update/urn:li:share:7448097531185635328',status:'live'},
+    {label:'Facebook (Devlog)',url:'https://facebook.com/924728664046541_122131348257114437',status:'live'},
+    {label:'TikTok (Short)',url:'https://tiktok.com/@makkoai/video/7626809193848196366',status:'live'},
+    {label:'YouTube Short',url:'https://www.youtube.com/shorts/1xaQSR5EIiM',status:'live'},
+    {label:'LinkedIn (Short)',url:'https://www.linkedin.com/feed/update/urn:li:ugcPost:7448055987061620736',status:'live'},
+    {label:'Instagram (Short)',url:'https://www.instagram.com/reel/DW6z7wLiJsq/',status:'live'},
+    {label:'Facebook (Short)',url:'https://www.facebook.com/reel/2055179452099127/',status:'live'},
+    {label:'Twitter/X (Short)',url:'https://x.com/1932459483348779008/status/2042290300467519998',status:'live'}
+  ]
 };
 
 // ── Backlog bank (6 clips held in reserve as of wk of Apr 6) ────────────────
