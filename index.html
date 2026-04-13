@@ -869,7 +869,7 @@ body{
           <div class="article-title">SEO Blog Post + Launch Email + PH Engagement</div>
           <div class="article-meta">
             <span class="status status-pending">Pending</span>
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted)">Apr 13, 2026</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted)">Apr 20, 2026</span>
           </div>
         </div>
         <div class="article-body">
@@ -4148,7 +4148,7 @@ dayMap[apr10.toDateString()]={
 
 // ── Apr 20 (Mon) — Devs Short 1 + PH Launch ────────────────────────────────
 // PH Launch day already defined below — we merge the short into the ph-launch entry
-// handled in apr13 override below
+// handled in apr20 override below
 
 // ── Apr 14 (Tue) — Devs Short 2 ─────────────────────────────────────────────
 const apr14=new Date(2026,3,14);
@@ -4275,11 +4275,12 @@ dayMap[apr2.toDateString()]={
 };
 
 // Product Hunt launch day — also posts Devs Short 1
-const apr13=new Date(2026,3,13);
-dayMap[apr13.toDateString()]={
+const apr13=new Date(2026,3,20);
+const apr20=new Date(2026,3,20);
+dayMap[apr20.toDateString()]={
   type:'ph-launch',
-  week:2,
-  date:apr13,
+  week:3,
+  date:apr20,
   title:'Apr 20 — Product Hunt Launch + Devs Short 1',
   short:{
     title:'Why General AI Can\'t Make Game Sprites',
@@ -4403,10 +4404,10 @@ dayMap[mar31.toDateString()]={
 };
 
 // Product Hunt launch — Apr 20 overrides the regular Mon clip slot
-dayMap[apr13.toDateString()]={
+dayMap[apr20.toDateString()]={
   type:'ph-launch',
-  week:2,
-  date:apr13,
+  week:3,
+  date:apr20,
   title:'Product Hunt Launch Day — Makko AI',
   ph:{
     url:'https://www.producthunt.com/posts/makko-ai',
@@ -4886,7 +4887,7 @@ window.addEventListener('load', function(){
 (function(){
   var el = document.getElementById('ph-days');
   if(!el) return;
-  var launch = new Date('2026-04-13T07:01:00Z'); // midnight PDT = 07:01 UTC
+  var launch = new Date('2026-04-20T07:01:00Z'); // midnight PDT = 07:01 UTC
   var now = new Date();
   var diff = Math.ceil((launch - now) / 86400000);
   if(diff <= 0){
