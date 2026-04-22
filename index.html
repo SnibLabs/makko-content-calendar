@@ -803,11 +803,6 @@ body{
     <span class="cmd-stat-label">Press Contacted</span>
     <span class="cmd-stat-value green">21</span>
   </div>
-  <div class="cmd-countdown">
-    <span>🚀 Product Hunt</span>
-    <span class="cmd-countdown-num" id="ph-days">—</span>
-    <span>days</span>
-  </div>
 </div>
 <div class="tab-nav">
   <button class="tab-btn" onclick="showTab('tab-prework')">Pre-Q2 Work Log</button>
@@ -1721,6 +1716,163 @@ body{
     </div>
   </div>
 
+  <!-- SEO INTERNAL LINKING AUDIT -->
+  <div class="ops-section" style="padding:0;background:transparent;border:none;">
+    <div class="collapsible-header" onclick="toggleSection('cs_seo_linking_audit')" style="background:rgba(59,142,223,0.08);border:1px solid rgba(59,142,223,0.2);border-radius:4px;">
+      <div>
+        <div class="collapsible-title">SEO Internal Linking Audit</div>
+        <div class="collapsible-meta">Priority cluster: 85% complete &middot; Full 45-article audit: 30% complete &middot; Last updated Apr 22, 2026</div>
+      </div>
+      <span class="collapsible-arrow open" id="arr-cs_seo_linking_audit">&#x25BC;</span>
+    </div>
+    <div class="collapsible-body open" id="sec-cs_seo_linking_audit" style="padding:16px 18px;">
+
+      <!-- STATUS BAR -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px;">
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:10px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#4ade80;font-family:'IBM Plex Mono',monospace;">85%</div>
+          <div style="font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;">Priority Cluster</div>
+          <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">5 Bing target articles</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:10px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#fcd34d;font-family:'IBM Plex Mono',monospace;">30%</div>
+          <div style="font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;">Full Audit</div>
+          <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">45 articles total</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:10px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#e05a5a;font-family:'IBM Plex Mono',monospace;">8</div>
+          <div style="font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;">Open Gaps</div>
+          <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">Confirmed missing</div>
+        </div>
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:10px;text-align:center;">
+          <div style="font-size:18px;font-weight:700;color:#a3a3a3;font-family:'IBM Plex Mono',monospace;">6</div>
+          <div style="font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;">Unchecked</div>
+          <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">A27 A29 A37 A39 A44 +</div>
+        </div>
+      </div>
+
+      <!-- PRIORITY ARTICLES LEGEND -->
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">5 Priority Articles (Bing pos 6&ndash;12)</div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:18px;">
+        <div style="background:rgba(59,142,223,0.08);border:1px solid rgba(59,142,223,0.2);border-radius:4px;padding:8px 10px;font-size:10px;">
+          <div style="font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace;">A33</div>
+          <div style="color:var(--text-secondary);margin-top:2px;">Vibe Coding Games</div>
+        </div>
+        <div style="background:rgba(59,142,223,0.08);border:1px solid rgba(59,142,223,0.2);border-radius:4px;padding:8px 10px;font-size:10px;">
+          <div style="font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace;">A32</div>
+          <div style="color:var(--text-secondary);margin-top:2px;">AI Game Art Generator</div>
+        </div>
+        <div style="background:rgba(59,142,223,0.08);border:1px solid rgba(59,142,223,0.2);border-radius:4px;padding:8px 10px;font-size:10px;">
+          <div style="font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace;">A26</div>
+          <div style="color:var(--text-secondary);margin-top:2px;">Collections Guide</div>
+        </div>
+        <div style="background:rgba(59,142,223,0.08);border:1px solid rgba(59,142,223,0.2);border-radius:4px;padding:8px 10px;font-size:10px;">
+          <div style="font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace;">A31</div>
+          <div style="color:var(--text-secondary);margin-top:2px;">Complete Walkthrough</div>
+        </div>
+        <div style="background:rgba(59,142,223,0.08);border:1px solid rgba(59,142,223,0.2);border-radius:4px;padding:8px 10px;font-size:10px;">
+          <div style="font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace;">A07</div>
+          <div style="color:var(--text-secondary);margin-top:2px;">Real Examples</div>
+        </div>
+      </div>
+
+      <!-- OUTBOUND LINKS CONFIRMED -->
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4ade80;margin-bottom:8px;">&#x2713; Outbound Links &mdash; Confirmed Live</div>
+      <div style="overflow-x:auto;margin-bottom:18px;">
+        <table style="width:100%;border-collapse:collapse;font-size:11px;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--b-medium);">
+              <th style="padding:7px 10px;text-align:left;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;">Article</th>
+              <th style="padding:7px 10px;text-align:left;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;">Links Out To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--b-subtle);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A33 Vibe Coding</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A31, A07, A08, A09, A43</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-subtle);background:rgba(255,255,255,0.02);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A32 AI Game Art</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A26, A29, A37, A14, A15</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-subtle);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A26 Collections</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A32, A29, A37, A14, A15</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-subtle);background:rgba(255,255,255,0.02);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A31 Walkthrough</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A33, A07, A43, A26, A37, A32, A29</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-subtle);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A07 Real Examples</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A33, A08, A09, A31, A43, A30 <span style="color:#e05a5a;font-size:9px;">(A03 missing)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- INBOUND LINKS CONFIRMED -->
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4ade80;margin-bottom:8px;">&#x2713; Inbound Links &mdash; Articles Edited to Point In</div>
+      <div style="overflow-x:auto;margin-bottom:18px;">
+        <table style="width:100%;border-collapse:collapse;font-size:11px;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--b-medium);">
+              <th style="padding:7px 10px;text-align:left;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;">Target</th>
+              <th style="padding:7px 10px;text-align:left;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;">Now Linked From</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--b-subtle);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A33 Vibe Coding</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A07, A08, A21, A31, A43, A03, A04, A30</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-subtle);background:rgba(255,255,255,0.02);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A32 AI Game Art</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A35, A36, A28, A39, A37, A34, A26</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-subtle);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A26 Collections</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A30, A31, A33, A36, A28, A43, A07, A34, A35, A32, A40, A41, A42</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-subtle);background:rgba(255,255,255,0.02);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A07 Real Examples</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A03, A04, A08, A09, A05, A43, A33, A30, A31</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--b-subtle);">
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;font-family:'IBM Plex Mono',monospace;">A31 Walkthrough</td>
+              <td style="padding:7px 10px;font-size:10px;color:var(--text-secondary);">A03, A04, A08, A09, A05, A43, A33, A07</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- OUTSTANDING GAPS -->
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#e05a5a;margin-bottom:8px;">&#x26A0; 8 Outstanding Gaps &mdash; Next Session</div>
+      <div style="background:rgba(224,90,90,0.06);border:1px solid rgba(224,90,90,0.2);border-radius:4px;padding:12px 14px;margin-bottom:8px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+          <div style="font-size:10px;color:var(--text-secondary);line-height:1.8;">
+            <span style="color:#e05a5a;font-weight:700;font-family:'IBM Plex Mono',monospace;">1.</span> A07 outbound &rarr; A03 on "natural language"<br>
+            <span style="color:#e05a5a;font-weight:700;font-family:'IBM Plex Mono',monospace;">2.</span> A21 outbound &rarr; A07 on "real examples"<br>
+            <span style="color:#e05a5a;font-weight:700;font-family:'IBM Plex Mono',monospace;">3.</span> A21 outbound &rarr; A31 on "complete walkthrough"<br>
+            <span style="color:#e05a5a;font-weight:700;font-family:'IBM Plex Mono',monospace;">4.</span> A30 outbound &rarr; A31 on "complete walkthrough"
+          </div>
+          <div style="font-size:10px;color:var(--text-secondary);line-height:1.8;">
+            <span style="color:#e05a5a;font-weight:700;font-family:'IBM Plex Mono',monospace;">5.</span> A05 outbound &rarr; A33 on "vibe coding"<br>
+            <span style="color:#e05a5a;font-weight:700;font-family:'IBM Plex Mono',monospace;">6.</span> A40 outbound &rarr; A32 on "AI game art generator"<br>
+            <span style="color:#e05a5a;font-weight:700;font-family:'IBM Plex Mono',monospace;">7.</span> A41 outbound &rarr; A32 on "AI game art generator"<br>
+            <span style="color:#e05a5a;font-weight:700;font-family:'IBM Plex Mono',monospace;">8.</span> A42 outbound &rarr; A32 on "AI game art generator"
+          </div>
+        </div>
+      </div>
+
+      <!-- UNCHECKED -->
+      <div style="font-size:10px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;margin-top:8px;">
+        Unchecked next: A27, A29, A37, A39, A44 + general A01&ndash;A45 sweep
+      </div>
+
+    </div>
+  </div>
+
 </div>
 </div><!-- end tab-ops -->
 
@@ -1733,18 +1885,18 @@ body{
 
   <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px;">
     <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">SEO Backlinks &amp; Coverage</div>
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);">Last updated: Apr 21, 2026 &middot; 45 total placements tracked</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);">Last updated: Apr 22, 2026 &middot; 63 total placements tracked</div>
   </div>
   <p style="font-size:11px;color:var(--text-muted);margin-bottom:20px;">All confirmed backlinks and coverage pointing to makko.ai. NF = nofollow. DR = domain rating.</p>
 
   <!-- ══ SUMMARY STATS ══════════════════════════════════════════════════════ -->
   <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:24px;">
     <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:6px;padding:12px;text-align:center;">
-      <div style="font-size:20px;font-weight:700;color:#3b8edf;font-family:'IBM Plex Mono',monospace;">45</div>
+      <div style="font-size:20px;font-weight:700;color:#3b8edf;font-family:'IBM Plex Mono',monospace;">63</div>
       <div style="font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:4px;">Total Placements</div>
     </div>
     <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:6px;padding:12px;text-align:center;">
-      <div style="font-size:20px;font-weight:700;color:#4ade80;font-family:'IBM Plex Mono',monospace;">8</div>
+      <div style="font-size:20px;font-weight:700;color:#4ade80;font-family:'IBM Plex Mono',monospace;">11</div>
       <div style="font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:4px;">DR 30+ Links</div>
     </div>
     <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:6px;padding:12px;text-align:center;">
@@ -1758,8 +1910,8 @@ body{
       <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">EN ES PT DE FR AR KO JA RU IT NL UK</div>
     </div>
     <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:6px;padding:12px;text-align:center;">
-      <div style="font-size:20px;font-weight:700;color:#9b8fd4;font-family:'IBM Plex Mono',monospace;">2</div>
-      <div style="font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:4px;">Original Articles</div>
+      <div style="font-size:20px;font-weight:700;color:#9b8fd4;font-family:'IBM Plex Mono',monospace;">4</div>
+      <div style="font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:4px;">Editorial / Newsletter</div>
       <div style="font-size:9px;color:var(--text-muted);margin-top:2px;">softandapps.info + creativeainews</div>
     </div>
   </div>
@@ -1802,7 +1954,33 @@ body{
             <td style="padding:7px 10px;text-align:center;"><span style="font-size:10px;font-weight:700;color:#4ade80;">71</span></td>
             <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">21 Apr 2026</td>
             <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);">Web services directory — solid</td>
+          </tr>          <tr style="border-bottom:1px solid var(--b-subtle);background:rgba(74,222,128,0.05);">
+            <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;">DecodeAI newsletter<span style="font-size:9px;color:#4ade80;margin-left:4px;">EDITORIAL</span></td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">EN</td>
+            <td style="padding:7px 10px;text-align:center;"><span style="font-size:10px;font-weight:700;color:#4ade80;">84</span></td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">21 Apr 2026</td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);">Editorial newsletter — 26K domain traffic. Mentioned Makko in Google vs Claude coding post. Unsolicited. Best new editorial pickup from launch window.</td>
           </tr>          <tr style="border-bottom:1px solid var(--b-subtle);">
+            <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);">Wibki</td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">EN</td>
+            <td style="padding:7px 10px;text-align:center;"><span style="font-size:10px;font-weight:700;color:#4ade80;">64</span></td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">22 Apr 2026</td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);">Web directory — 1.4K domain traffic. Clean listing.</td>
+          </tr>          <tr style="border-bottom:1px solid var(--b-subtle);">
+            <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);">IdeaXIdea (JA)</td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">JA</td>
+            <td style="padding:7px 10px;text-align:center;"><span style="font-size:10px;font-weight:700;color:#4ade80;">53</span></td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">22 Apr 2026</td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);">Japanese PH aggregator — auto-listed Makko at #11. 993 referring domains.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--b-subtle);background:rgba(155,143,212,0.05);">
+            <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;">Crunch.id<span style="font-size:9px;color:#9b8fd4;margin-left:4px;">ARTICLE</span></td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">EN</td>
+            <td style="padding:7px 10px;text-align:center;"><span style="font-size:10px;font-weight:700;color:#4ade80;">54</span></td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">22 Apr 2026</td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);">Indonesian WordPress &mdash; article on PH launch domain usage. NOFOLLOW but real editorial content. By Leanne McMahon.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--b-subtle);">
             <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);">AIPure.ai<span style="font-size:9px;color:#f5a623;margin-left:4px;">NF</span></td>
             <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">EN</td>
             <td style="padding:7px 10px;text-align:center;"><span style="font-size:10px;font-weight:700;color:#4ade80;">56</span></td>
@@ -1850,7 +2028,14 @@ body{
             <td style="padding:7px 10px;text-align:center;"><span style="font-size:10px;font-weight:700;color:#3b8edf;">26</span></td>
             <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">21 Apr 2026</td>
             <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);">AI tool directory</td>
-          </tr>          <tr style="border-bottom:1px solid var(--b-subtle);">
+          </tr>          <tr style="border-bottom:1px solid var(--b-subtle);background:rgba(155,143,212,0.05);">
+            <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);font-weight:600;">The Intelligent Worker<span style="font-size:9px;color:#9b8fd4;margin-left:4px;">NEWSLETTER</span></td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">EN</td>
+            <td style="padding:7px 10px;text-align:center;"><span style="font-size:10px;font-weight:700;color:#fcd34d;">5</span></td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">21 Apr 2026</td>
+            <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);">Editorial newsletter pickup — listed Makko. Real subscriber base. Unsolicited.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--b-subtle);">
             <td style="padding:7px 10px;font-size:10px;color:var(--text-primary);">EveryDev.ai</td>
             <td style="padding:7px 10px;font-size:9px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">EN</td>
             <td style="padding:7px 10px;text-align:center;"><span style="font-size:10px;font-weight:700;color:#3b8edf;">21</span></td>
@@ -2006,7 +2191,9 @@ body{
   <!-- ══ LOW DR / SPAM DIRECTORIES ══════════════════════════════════════════ -->
   <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#a3a3a3;margin-bottom:8px;">Low DR / Spam Directories &mdash; Logged, Low Value</div>
   <div style="background:rgba(255,255,255,0.03);border:1px solid var(--b-subtle);border-radius:4px;padding:10px 14px;margin-bottom:8px;font-size:10px;color:var(--text-muted);line-height:1.8;">
-    AIToolsSpace (EN/ES/JA/KO/DE/FR/AR/PT/ID/RU/ZH) &mdash; DR 1.2, SPAM &mdash; multiple language category pages, all auto-generated &middot;
+    AIToolsSpace (EN/ES/JA/KO/DE/FR/AR/PT/ID/RU/ZH) &mdash; DR 1.2, SPAM &mdash; 11 language category pages, all auto-generated &middot;
+    AIAxio &mdash; DR 1.3 &middot;
+    GPTZone (EN/ES x3) &mdash; DR 16, NF &middot;
     Neirostack.ru (x2) &mdash; DR 0, SPAM/SPONSORED &middot;
     FindAITools Makko vs Convai &mdash; DR 0, SPAM &middot;
     AIventa Trending &mdash; DR 0 &middot;
@@ -2021,9 +2208,9 @@ body{
 
   <!-- ══ NOTABLE SIGNAL ════════════════════════════════════════════════════ -->
   <div style="background:rgba(74,222,128,0.07);border:1px solid rgba(74,222,128,0.25);border-radius:4px;padding:12px 14px;margin-top:16px;">
-    <div style="font-size:10px;font-weight:700;color:#4ade80;margin-bottom:6px;">&#x2705; Key Takeaway from Apr 20-21 Backlink Spike</div>
+    <div style="font-size:10px;font-weight:700;color:#4ade80;margin-bottom:6px;">&#x2705; State of Play &mdash; Apr 22, 2026</div>
     <div style="font-size:10px;color:var(--text-secondary);line-height:1.8;">
-      45 total placements tracked. 8 are DR 30+. The PH launch triggered automatic listings across AI directories in 12 languages within 24 hours &mdash; this is normal launch-day behavior from aggregators scraping PH. The high-value items are the DR 91 PH link, DR 92 Ghost Explore listing, Yahoo Finance wire pickup, Games Press trade coverage, and the independent Spanish article from softandapps.info (DR 33). The GeekWire Seattle startup radar mention (March) syndicated to 8+ sites in 6 languages independently of the PH launch. Next priority: pursue original editorial coverage in game-specific publications to move beyond wire and directory links.
+      62 total placements tracked. 10 are DR 30+. 4 independent editorial or newsletter pickups. The PH launch triggered auto-listings across AI directories in 12 languages within 24 hours &mdash; expected behavior. High-value items: DR 92 Ghost Explore, DR 91 PH, DR 84 DecodeAI newsletter (editorial, unsolicited, 26K traffic), Yahoo Finance wire, Games Press trade coverage, DR 64 Wibki, DR 53 IdeaXIdea JA, DR 33 Softandapps.info (original Spanish article). The Intelligent Worker newsletter picked up Makko editorially (DR 5, real subscriber base). DecodeAI is the most actionable new relationship &mdash; outreach opportunity. Next priority: pursue original editorial in game-specific publications to move beyond wire and directory links.
     </div>
   </div>
 
@@ -2322,7 +2509,7 @@ body{
       </div>
       <span class="collapsible-arrow open" id="arr-meet_standup_apr20">▼</span>
     </div>
-    <div class="collapsible-body open" id="sec-meet_standup_apr20" style="padding:16px 18px;">
+    <div class="collapsible-body" id="sec-meet_standup_apr20" style="padding:16px 18px;">
 
       <div style="background:rgba(255,140,66,0.08);border:1px solid rgba(255,140,66,0.3);border-radius:4px;padding:14px 18px;margin-bottom:20px;">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#ff8c42;margin-bottom:12px;">🔺 Priority Actions — Owner Matrix</div>
@@ -2391,6 +2578,110 @@ body{
 
         </div>
       </div>
+
+  <div class="ops-section" style="padding:0;background:transparent;border:none;margin-top:8px;">
+    <div class="collapsible-header" onclick="toggleSection('meet_standup_apr21')" style="background:rgba(59,142,223,0.08);border:1px solid rgba(59,142,223,0.2);border-radius:4px;">
+      <div>
+        <div class="collapsible-title">Makko Standup &mdash; Apr 21, 2026</div>
+        <div class="collapsible-meta">Attendees: Kyle &middot; Brandon &middot; Cesar &middot; Zac &middot; Jeremy &middot; Tony V &middot; Mike Hayes &middot; David</div>
+      </div>
+      <span class="collapsible-arrow" id="arr-meet_standup_apr21">&#x25B6;</span>
+    </div>
+    <div class="collapsible-body" id="sec-meet_standup_apr21" style="padding:16px 18px;">
+
+      <div style="background:rgba(255,140,66,0.08);border:1px solid rgba(255,140,66,0.3);border-radius:4px;padding:14px 18px;margin-bottom:20px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#ff8c42;margin-bottom:12px;">&#x1F53A; Priority Actions &mdash; Owner Matrix</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+
+          <div style="background:rgba(255,255,255,0.03);border-left:3px solid #e05a5a;border-radius:4px;padding:10px 12px;">
+            <div style="font-size:10px;font-weight:700;color:#e05a5a;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Kyle</div>
+            <div style="font-size:11px;color:var(--text-secondary);line-height:1.8;">
+              &rarr; Fix blog internal links &mdash; Related Reading + old backlinks pointing to stale URLs<br>
+              &rarr; Complete PFPs by end of week (with Cesar)<br>
+              &rarr; Share blog audit doc with team
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03);border-left:3px solid #9b8fd4;border-radius:4px;padding:10px 12px;">
+            <div style="font-size:10px;font-weight:700;color:#9b8fd4;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Cesar</div>
+            <div style="font-size:11px;color:var(--text-secondary);line-height:1.8;">
+              &rarr; Implement video changes from Claw comparison &mdash; problem-first hooks, not tool tutorials<br>
+              &rarr; Record Yukin + Predzor content once Tony delivers tower defense assets<br>
+              &rarr; Coordinate Yukin for next Friday release<br>
+              &rarr; Coordinate Predzor for the week after Yukin<br>
+              &rarr; Complete PFPs by end of week (with Kyle)
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03);border-left:3px solid #4ade80;border-radius:4px;padding:10px 12px;">
+            <div style="font-size:10px;font-weight:700;color:#4ade80;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Brandon</div>
+            <div style="font-size:11px;color:var(--text-secondary);line-height:1.8;">
+              &rarr; Implement drag and drop &mdash; move concept art + collections into subcollections<br>
+              &rarr; Remove safety net image deletion feature (uses wrong user ID instead of bucket owner)<br>
+              &rarr; Work on collection exports &mdash; human-readable, PNG files, Godot-compatible
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03);border-left:3px solid #f5a623;border-radius:4px;padding:10px 12px;">
+            <div style="font-size:10px;font-weight:700;color:#f5a623;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Tony V</div>
+            <div style="font-size:11px;color:var(--text-secondary);line-height:1.8;">
+              &rarr; Finish tower defense game asset base &mdash; 100 waves, 20 enemies, 10 towers, backgrounds<br>
+              &rarr; Finish Pepperdine Most Fundable Companies second-round submission<br>
+              &rarr; Start using Claude for AI-assisted art generation
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Key Decisions</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:#3b8edf;margin-bottom:4px;">Collections: Drag and Drop Priority</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.7;">Drag and drop to move concept art and collections into subcollections is the quick win. Long-term: character/background/prop segregation is legacy &mdash; transitioning to an asset tag system.</div>
+        </div>
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:#e05a5a;margin-bottom:4px;">Image Deletion Bugs &mdash; 3K+ Orphaned Items</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.7;">Two bugs: images deleted too soon, and safety net using wrong user ID. 3,000+ items marked for deletion but not being deleted. Also: 20GB orphaned animation frames in Supabase from early development.</div>
+        </div>
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:#4ade80;margin-bottom:4px;">Growth Strategy: Organic to $20-30K MRR First</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.7;">Jeremy: continue organic growth before seeking investment. Current state is alpha. MLP (Minimal Lovable Product) is the real starting line &mdash; defined as genuinely enjoying the product, not annoyed by the core loop. Estimated 1-2 months away.</div>
+        </div>
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:#fcd34d;margin-bottom:4px;">Video: Problem-First Framing</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.7;">Claw comparison of Makko vs competitors: shift from "how to use the tool" to "solving game dev and artist problems." People who quit learning to code are the same people who quit learning to draw &mdash; framing is the lever.</div>
+        </div>
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text-primary);margin-bottom:4px;">A16Z Speedrun + Pepperdine</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.7;">Tony submitted A16Z speedrun accelerator (confirmed entry). Finishing second-round submission for Pepperdine Most Fundable Companies. Tower defense game: 100 waves, 20 enemies, 10 towers &mdash; complete.</div>
+        </div>
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text-primary);margin-bottom:4px;">Human-in-the-Loop is the Differentiator</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.7;">Jeremy: AI-native workflow = AI generates, human reviews and directs heavily. Fully automated "vibe-coded" is insufficient for complex projects. 90% of game assets are static &mdash; animation was over-prioritized. Asset consistency is the core value.</div>
+        </div>
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text-primary);margin-bottom:4px;">Art Generation: Free-Form Mode Needed</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.7;">Current presets are confusing. Need X/unselect option for settings &mdash; experienced users who bring their own prompts are blocked. Brandon + Jeremy aligned: free-form mode ships alongside presets.</div>
+        </div>
+
+        <div style="background:var(--cards);border:1px solid var(--b-medium);border-radius:4px;padding:12px 14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text-primary);margin-bottom:4px;">Design Studio &mdash; Future Vision</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.7;">Jeremy: "Design Studio" layer above Art Studio + Code Studio. Acts as project director, manages design artifacts, auto-creates and organizes collections, orchestrates parallel task execution. Not near-term.</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
 
       <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Key Decisions</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px;">
@@ -2464,7 +2755,7 @@ body{
       <span class="collapsible-arrow open" id="arr-ctx_week_apr13">▶</span>
     </div>
 
-    <div class="collapsible-body open" id="sec-ctx_week_apr13" style="padding:16px 18px;">
+    <div class="collapsible-body" id="sec-ctx_week_apr13" style="padding:16px 18px;">
 
 <div class="ops-section" style="padding:0;background:transparent;border:none;">
     <div class="collapsible-header" onclick="toggleSection('meet_standup_apr15')" style="background:rgba(59,142,223,0.08);border:1px solid rgba(59,142,223,0.25);border-radius:4px;">
@@ -2472,9 +2763,9 @@ body{
         <div class="collapsible-title">Makko Standup — Apr 15, 2026</div>
         <div class="collapsible-meta">Attendees: Kyle · Brandon · Cesar · Zac · Jeremy · Tony V · Mike Hayes · David</div>
       </div>
-      <span class="collapsible-arrow open" id="arr-meet_standup_apr15">▼</span>
+      <span class="collapsible-arrow open" id="arr-meet_standup_apr15">▶</span>
     </div>
-    <div class="collapsible-body open" id="sec-meet_standup_apr15" style="padding:16px 18px;">
+    <div class="collapsible-body" id="sec-meet_standup_apr15" style="padding:16px 18px;">
 
       <div style="background:rgba(255,140,66,0.08);border:1px solid rgba(255,140,66,0.3);border-radius:4px;padding:14px 18px;margin-bottom:20px;">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#ff8c42;margin-bottom:12px;">🔺 Priority Actions — Owner Matrix</div>
@@ -3281,6 +3572,51 @@ body{
       <div class="wrap-section-label">P — Plan for next week</div>
       <div class="wrap-item">↗ Plan submission bug resolved</div>
       <div class="wrap-item">↗ Planning mode stable — return to animation pipeline rework</div>
+
+    <!-- APR 21 STANDUP UPDATES -->
+    <div style="grid-column:1/-1;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);padding:4px 0 8px 0;border-top:1px solid var(--b-subtle);margin-top:4px;">Apr 21 Updates</div>
+
+    <div class="wrap-card">
+      <div class="wrap-card-name kyle">Kyle</div>
+      <div class="wrap-section-label">A &mdash; Actions in flight</div>
+      <div class="wrap-item">&#x2192; Internal linking audit &mdash; priority cluster 85% complete (A33, A32, A26, A31, A07)</div>
+      <div class="wrap-item">&#x2192; 8 confirmed link gaps documented for next session</div>
+      <div class="wrap-item">&#x2192; Fix blog Related Reading + old backlinks pointing to stale URLs</div>
+      <div class="wrap-item">&#x2192; Complete PFPs by end of week (with Cesar)</div>
+      <div class="wrap-item">&#x2192; Share blog audit doc with team</div>
+      <div class="wrap-section-label">P &mdash; Next</div>
+      <div class="wrap-item">&#x2197; Close 8 link gaps (A05, A07, A21, A30, A40, A41, A42)</div>
+      <div class="wrap-item">&#x2197; Begin unchecked: A27, A29, A37, A39, A44</div>
+    </div>
+
+    <div class="wrap-card">
+      <div class="wrap-card-name" style="background:#9b8fd4;">Cesar</div>
+      <div class="wrap-section-label">A &mdash; Actions in flight</div>
+      <div class="wrap-item">&#x2192; Implement video changes from Claw comparison &mdash; problem-first hooks</div>
+      <div class="wrap-item">&#x2192; Record Yukin + Predzor content once Tony delivers tower defense assets</div>
+      <div class="wrap-item">&#x2192; Coordinate Yukin for next Friday release</div>
+      <div class="wrap-item">&#x2192; Complete PFPs by end of week (with Kyle)</div>
+    </div>
+
+    <div class="wrap-card">
+      <div class="wrap-card-name" style="background:#4ade80;color:#0a1018;">Brandon</div>
+      <div class="wrap-section-label">A &mdash; Actions in flight</div>
+      <div class="wrap-item">&#x2192; Drag and drop &mdash; move concept art + collections into subcollections</div>
+      <div class="wrap-item">&#x2192; Remove safety net image deletion (wrong user ID bug)</div>
+      <div class="wrap-item">&#x2192; Collection exports &mdash; human-readable, PNG, Godot-compatible</div>
+      <div class="wrap-section-label">R &mdash; Roadblocks</div>
+      <div class="wrap-item">&#x2192; 3,000+ items marked for deletion not being deleted &mdash; second bug to fix</div>
+    </div>
+
+    <div class="wrap-card">
+      <div class="wrap-card-name tony">Tony V</div>
+      <div class="wrap-section-label">W &mdash; What got done</div>
+      <div class="wrap-item">&#x2713; Tower defense complete &mdash; 100 waves, 20 enemies, 10 towers</div>
+      <div class="wrap-item">&#x2713; A16Z speedrun accelerator submitted (confirmed entry)</div>
+      <div class="wrap-section-label">A &mdash; Actions in flight</div>
+      <div class="wrap-item">&#x2192; Pepperdine Most Fundable Companies &mdash; second-round submission</div>
+    </div>
+
     </div>
 
   </div>
@@ -4254,7 +4590,7 @@ dayMap[apr14.toDateString()]={
     hook:'Most solo devs never finish. And it\'s not because they\'re lazy.',
     cta:'Watch the full video to see the fix.',
     source:'Reason Devs Never Finish Games — SHORT 2',
-    status:'pending',
+    status:'live',
   }
 };
 
@@ -4271,7 +4607,7 @@ dayMap[apr15.toDateString()]={
     hook:'I typed a description. This is what came out.',
     cta:'Build yours free at Makko.ai.',
     source:'Reason Devs Never Finish Games — SHORT 3',
-    status:'pending',
+    status:'live',
   }
 };
 
@@ -4424,6 +4760,41 @@ dayMap[apr20.toDateString()]={
     {label:'Twitter/X',url:'https://x.com/1932459483348779008/status/2043790256034447608',status:'live'},
     {label:'YouTube',url:'https://www.youtube.com/watch?v=plW10Qupp0I',status:'live'},
     {label:'Instagram',url:'https://www.instagram.com/reel/DXFeCKZD6RQ/',status:'live'}
+  ]
+};
+
+
+// ── Apr 21 (Tue) — Social Posts + Standup Day ─────────────────────────────
+const apr21=new Date(2026,3,21);
+dayMap[apr21.toDateString()]={
+  type:'article-pub',
+  week:3,
+  date:apr21,
+  title:'Apr 21 — Social Posts Live',
+  social:[
+    {label:'Facebook',url:'',status:'live'},
+    {label:'TikTok',url:'',status:'live'},
+    {label:'LinkedIn',url:'',status:'live'},
+    {label:'Twitter/X',url:'',status:'live'},
+    {label:'YouTube',url:'',status:'live'},
+    {label:'Instagram',url:'',status:'live'}
+  ]
+};
+
+// ── Apr 22 (Wed) — Social Posts ───────────────────────────────────────────
+const apr22=new Date(2026,3,22);
+dayMap[apr22.toDateString()]={
+  type:'article-pub',
+  week:3,
+  date:apr22,
+  title:'Apr 22 — Social Posts Live',
+  social:[
+    {label:'Facebook',url:'',status:'live'},
+    {label:'TikTok',url:'',status:'live'},
+    {label:'LinkedIn',url:'',status:'live'},
+    {label:'Twitter/X',url:'',status:'live'},
+    {label:'YouTube',url:'',status:'live'},
+    {label:'Instagram',url:'',status:'live'}
   ]
 };
 
